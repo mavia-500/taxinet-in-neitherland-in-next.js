@@ -35,7 +35,7 @@ const Header = () => {
                 <img src="Taxinet logo 1 6.png" className='w-30 h-auto '  alt="" />
                 {selectGroups.map((group, i) => (
                     
-                        <select id={group.placeHolder} defaultValue={group.placeHolder} key={i} >
+                        <select id={group.placeHolder} defaultValue={group.placeHolder} key={i}  className=" ">
                             <option key={i} hidden>
                                 {group.placeHolder}
                             </option>

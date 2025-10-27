@@ -38,8 +38,7 @@ const Reviews = () => {
     return (
         <section className="bg-[#2d2d2d] text-white mt-15 ">
             <h2 className="text-center text-3xl font-bold p-10">
-                Beoordelingen Van Klanten
-            </h2>
+                beoordelingen van klanten            </h2>
 
             <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-4 gap-8 mx-auto pb-10 ">
                 {testimonials.map((t, i) => (
@@ -60,12 +59,12 @@ const Reviews = () => {
                             </div>
                             <div>
                                 <p className="font-semibold ">{t.name}</p>
-                               
+
                                 <div className="flex text-yellow-400 mt-1">
                                     {Array(5)
                                         .fill()
                                         .map((_, idx) => (
-                                            <FaStar key={idx} className='mx-1'/>
+                                            <FaStar key={idx} className='mx-1' />
                                         ))}
                                 </div>
                             </div>

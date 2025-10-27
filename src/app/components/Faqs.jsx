@@ -14,12 +14,12 @@ import { FaPlusCircle } from "react-icons/fa";
 const Faqs = () => {
     const faqs = [
         {
-            question: "Hoe kan ik een taxi reserveren?",
+            question: "What is Increasy?",
             answer:
-                "U kunt eenvoudig een taxi reserveren via onze website door uw ophaal- en bestemmingslocatie in te vullen. U ontvangt direct een prijs en bevestiging.",
+                "lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum",
         },
         {
-            question: "Zijn jullie 24/7 beschikbaar?",
+            question: "How does the free trial work?",
             answer:
                 "Ja, onze taxi’s zijn 24 uur per dag en 7 dagen per week beschikbaar, ook tijdens feestdagen.",
         },
@@ -43,7 +43,7 @@ const Faqs = () => {
                         Klaar Om Nu Uw Taxi Te Boeken?
                     </h3>
                     <div className="text-white flex gap-6">
-                        <button className="flex item items-center  bg-[#ff8900] hover:bg-yellow-600 text-black font-semibold px-6 py-3 rounded-lg transition-all">
+                        <button className="flex item items-center shadow-amber-800 bg-[#ff8900] hover:bg-yellow-600 text-black font-semibold px-6 py-3 rounded-lg transition-all">
                             <IoCallOutline className='mr-3' /> 0858000365
                         </button>
                         <button className="flex items-center bg-transparent border border-[#ff8900] hover:bg-yellow-500 hover:text-black text-white font-semibold px-6 py-3 rounded-lg transition-all">
@@ -64,7 +64,7 @@ const Faqs = () => {
                 <div className="max-w-2xl w-full text-center">
                     <p className="text-[#ff8900] inline-block p-2  bg-black rounded-2xl">Vragen? Wij hebben antwoorden</p>
                     <h2 className="text-white font-bold text-4xl mt-3 mb-10">
-                        Veelgestelde <span className="text-[#ff8900]">Vragen</span>
+                        Veelgestelde  <span className="text-[#ff8900]">Vragen</span>
                     </h2>
 
                     <div className="space-y-4 text-left">

@@ -12,7 +12,7 @@ export default function Footer() {
                 {/* Logo Section */}
                 <div className="flex flex-col items-start">
                     <img
-                        src="/Taxinet logo 1 6.png"
+                        src="/aset/logo/Taxinet logo 1 6.png"
                         alt="Taxinet Logo"
                         className="w-32 h-auto mb-4"
                     />
@@ -36,15 +36,14 @@ export default function Footer() {
                 <div>
 
                     <ul className="space-y-2 text-gray-300">
-                        {Array(8)
-                            .fill("Taxi Service Den Haag")
-                            .map((item, i) => (
-                                <li key={i}>
-                                    <Link href="/" >
-                                        {item}
-                                    </Link>
-                                </li>
-                            ))}
+                        <li><Link href="/">Taxi service Den haag</Link></li>
+                        <li><Link href="/">Taxi service Rotterdam</Link></li>
+                        <li><Link href="/">Taxi service Barendrecht</Link></li>   
+                        <li><Link href="/">Taxi service schiedam</Link></li>   
+                        <li><Link href="/">Taxi service Hoogvliet</Link></li>   
+                        <li><Link href="/">Taxi service spijkenisse</Link></li>   
+                        <li><Link href="/">Taxi service brielle</Link></li>   
+                        <li><Link href="/">Taxi service geervliet</Link></li>   
                     </ul>
                 </div>
 
@@ -52,10 +51,10 @@ export default function Footer() {
                 <div>
 
                     <ul className="space-y-2 text-gray-300">
-                        <li><Link href="/">Over ons</Link></li>
+                        <li><Link href="/">Overons</Link></li>
                         <li><Link href="/">Nieuws</Link></li>
                         <li><Link href="/">Direct Reserveren</Link></li>
-                        <li><Link href="/">Taxi Den Haag - Contact</Link></li>
+                        <li><Link href="/">Taxi Den Haag-Contact</Link></li>
                     </ul>
                 </div>
             </div>
@@ -68,7 +67,7 @@ export default function Footer() {
                     className="flex items-center gap-2  "
                 >
                     <GrMap className=" " />
-                    Rederijkerstraat 159, 2531VK Den Haag, Nederland
+                    Rederijkertsraat 159, 2531VK Den Haag, Nederland
                 </Link>
 
                 <div className="flex gap-2 items-center">

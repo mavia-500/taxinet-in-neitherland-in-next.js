@@ -7,9 +7,9 @@ import WorkingPartner from '../components/WorkingPartner'
 import Faqs from '../components/Faqs'
 import Footer from '../components/Footer'
 
-const page = () => {
+const Homepage = () => {
   return (
-    <div>
+    <div className='overflow-hidden'>
         <Header/>
         <Main/>
         <Section/>  
@@ -21,4 +21,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Homepage

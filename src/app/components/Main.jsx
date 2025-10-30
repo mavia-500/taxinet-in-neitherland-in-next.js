@@ -15,138 +15,141 @@ const Main = () => {
     ]
     return (
         <div className='bg-black  text-white '>
-            <div className=' md:grid md:grid-cols-2  sm:grid-cols-1 p-20  '>
+            <div className="bg-black text-white">
+  <div className="grid md:grid-cols-2 sm:grid-cols-1 gap-10 p-6 sm:p-10 lg:p-16 xl:p-20 items-center">
 
-                <div>
-                    <h3 className='text-white font-bold text-7xl'>
-                        Welkom bij          
-                    </h3>
+    {/* LEFT SECTION */}
+    <div>
+      <h3 className="text-white font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight">
+        Welkom bij
+      </h3>
 
-                    <h3 className='text-[#ff8900] font-bold text-7xl '>
-                        Taxinet
-                    </h3>
-                    <h3 className='text-[#ff8900] font-bold text-7xl '>
-                       Haaglanden</h3>
-                        
-                    <p className='mt-8 text-gray-500 w-110'>
-                        Als u op zoek bent naar een goedkope en betrouwbare taxi in Den Haag en omstreken, dan bent u bij Taxinet Haaglanden aan het juiste adres. Wij bieden zowel particulier als zakelijk taxivervoer.</p>
+      <h3 className="text-[#ff8900] font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight">
+        Taxinet
+      </h3>
+      <h3 className="text-[#ff8900] font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight">
+        Haaglanden
+      </h3>
 
-                    <div className='flex mt-10 space-x-3'>
+      <p className="mt-6 sm:mt-8 text-gray-400 text-sm sm:text-base md:text-lg max-w-[600px]">
+        Als u op zoek bent naar een goedkope en betrouwbare taxi in Den Haag en omstreken, 
+        dan bent u bij Taxinet Haaglanden aan het juiste adres. Wij bieden zowel particulier 
+        als zakelijk taxivervoer.
+      </p>
 
-                        <button className="flex items-center  bg-[#ff8900] hover:bg-yellow-500 text-white font-semibold px-3 py-2   rounded-2xl shadow-md hover:shadow-lg transition-all duration-300">
-                            <IoCallOutline className="w-5 h-5 mx-1" />
-                            0858000365
-                        </button>
-                        <button className="flex items-center  bg-white hover:bg-yellow-500 text-black font-semibold px-3 py-2 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300">
+      {/* BUTTONS */}
+      <div className="flex flex-wrap gap-3 sm:gap-4 mt-8">
+        <button className="flex items-center bg-[#ff8900] hover:bg-yellow-500 text-white font-semibold px-4 py-2 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 text-sm sm:text-base">
+          <IoCallOutline className="w-5 h-5 mr-1" />
+          0858000365
+        </button>
 
-                            Direct Reserveren
-                        </button>
-                        <button className="flex items-center  bg-black hover:bg-yellow-500 text-white font-semibold px-3 py-2 border-2 border-[#874b07]  rounded-2xl shadow-md hover:shadow-lg transition-all duration-300">
-                            <IoEyeSharp
-                                className="w-5 h-5 mx-1" />
-                            Acties Bekijken
-                        </button>
-                    </div>
-                </div>
+        <button className="flex items-center bg-white hover:bg-yellow-500 text-black font-semibold px-4 py-2 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 text-sm sm:text-base">
+          Direct Reserveren
+        </button>
 
-                <div className='w-130  '>
-                    <div className='text-center'>
-                        <h2 className='font-bold text-2xl'>
-                            Bereken uw prijs
-                        </h2>
-                        <p className='text-sm font-normal  '>reserveer minimal 3 uur van to voren </p>
-                    </div>
+        <button className="flex items-center bg-black hover:bg-yellow-500 text-white font-semibold px-4 py-2 border-2 border-[#874b07] rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 text-sm sm:text-base">
+          <IoEyeSharp className="w-5 h-5 mr-1" />
+          Acties Bekijken
+        </button>
+      </div>
+    </div>
 
-                    <div className='bg-white text-black p-5 border-2 border-black rounded-lg '>
-                        <div className='text-[#ff8900] font-bold'>
-                            1. Bereken uw ritprijs
-                            <p>Van</p>
+    {/* RIGHT SECTION */}
+    <div className="w-full">
+      <div className="text-center mb-4">
+        <h2 className="font-bold text-xl sm:text-2xl">Bereken uw prijs</h2>
+        <p className="text-xs sm:text-sm font-normal">
+          Reserveer minimaal 3 uur van tevoren
+        </p>
+      </div>
 
+      <div className="bg-white text-black p-4 sm:p-6 border-2 border-black rounded-lg shadow-md">
+        <div className="text-[#ff8900] font-bold mb-3 text-sm sm:text-base">
+          1. Bereken uw ritprijs
+          <p className="text-black font-normal mt-1">Van</p>
+        </div>
 
-                        </div>
-                        <form action="" id='vanform1' className='grid grid-cols-2 gap-4 mb-4  '>
-                            <select name="" id="" defaultValue="Adres" className='border border-[#efeeed] '>
-                                <option value="Adres" hidden>Adres</option>
-                            </select>
-                            <input type="text" placeholder='Nr.' className='border-2 border-[#efeeed]' />
-                            <input type="text" placeholder='Plats' className='border-2 border-[#efeeed]' />
-                            <input type="text" placeholder='Straat' className='border-2 border-[#efeeed]' />
-                        </form>
+        {/* FORM 1 */}
+        <form id="vanform1" className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
+          <select defaultValue="Adres" className="border border-[#efeeed] p-2 rounded">
+            <option value="Adres" hidden>Adres</option>
+          </select>
+          <input type="text" placeholder="Nr." className="border-2 border-[#efeeed] p-2 rounded" />
+          <input type="text" placeholder="Plats" className="border-2 border-[#efeeed] p-2 rounded" />
+          <input type="text" placeholder="Straat" className="border-2 border-[#efeeed] p-2 rounded" />
+        </form>
 
+        {/* FORM 2 */}
+        <label htmlFor="vanform2" className="text-[#ff8900] font-bold text-sm sm:text-base">Van</label>
+        <form id="vanform2" className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
+          <select defaultValue="Adres" className="border border-[#efeeed] p-2 rounded">
+            <option value="Adres" hidden>Adres</option>
+          </select>
+          <input type="text" placeholder="Nr." className="border-2 border-[#efeeed] p-2 rounded" />
+          <input type="text" placeholder="Plats" className="border-2 border-[#efeeed] p-2 rounded" />
+          <input type="text" placeholder="Straat" className="border-2 border-[#efeeed] p-2 rounded" />
+          <select defaultValue="1Persoon" className="border-2 border-[#efeeed] p-2 rounded">
+            <option value="1Persoon" hidden>1 persoon</option>
+          </select>
+          <select defaultValue="Roistoelbus" className="border border-[#efeeed] p-2 rounded">
+            <option value="Roistoelbus" hidden>Rolstoelbus</option>
+          </select>
+        </form>
 
-                        <label htmlFor="vanform2" className='text-[#ff8900] font-bold'>Van</label>
-                        <form action="" id='vanform2' className='grid grid-cols-2 gap-4 mb-4'>
-                            {/* <label htmlFor="">Van</label> */}
-                            <select name="" id="" defaultValue="Adres" className='border border-[#efeeed] text-black'>
-                                <option value="Adres" hidden>Adres</option>
+        {/* SUBMIT BUTTON */}
+        <button className="flex items-center justify-center gap-2 w-full sm:w-auto mx-auto bg-[#ff8900] hover:bg-yellow-500 text-white font-semibold px-4 py-2 border-2 border-amber-300 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 text-sm sm:text-base">
+          <GiTotem className="w-5 h-5" />
+          Bereken ritprijs
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
 
-                            </select>
-                            <input type="text" placeholder='Nr.' className='border-2 border-[#efeeed]' />
-                            <input type="text" placeholder='Plats' className='border-2 border-[#efeeed]' />
-                            <input type="text" placeholder='Straat' className='border-2 border-[#efeeed]' />
-                            <select name="" id="" defaultValue="1Persoon" className='text-black border-2 border-[#efeeed]' >
-                                <option value="1Persoon" hidden>1 persoon</option>
-                            </select>
-                            <select name="" id="" defaultValue="Roistoelbus" className='border border-[#efeeed] text-black'>
-                                <option value="Roistoelbus" hidden>Rolstoelbus</option>
-                            </select>
-
-                        </form>
-                        <button className="flex items-center justify-center gap-2 mx-auto bg-[#ff8900] hover:bg-yellow-500 text-white font-semibold px-4 py-2 border-2 border-amber-300 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
-                            <GiTotem className="w-5 h-5" />
-                           Bereken ritprijs
-                        </button>
-
-
-
-
-
-                    </div>
-                </div>
-            </div>
-            <div className="relative  h-auto   ">
-                <div className='relative overflow-hidden'>
-                    <h1 className="text-[26rem] font-bold text-white opacity-10 leading-none -translate-x-20 -translate-y-20">
+            <div className="relative    bg-black">
+                <div className='overflow-hidden'>
+                    <h1 className="text-[26vw] font-bold text-white   -translate-x-20 opacity-10">
                         TAXINET
                     </h1>
                 </div>
 
-                <div className='absolute top-10 flex divide-x divide-gray-500 space-x-3 '>
-                    <div className='flex flex-col items-center text-center justify-center  w-40 '>
-                        <img src="/aset/images/24-hours-support 1.png" alt="24/7" className='h-7 w-7' />
-                        <p className='px-6' >24/7 bereikbaar</p>
+                <div className='absolute top-[5%]  flex divide-x divide-gray-500 space-x-[1vw] '>
+                    <div className='flex flex-col items-center text-center justify-center   '>
+                        <img src="/aset/images/24-hours-support 1.png" alt="24/7" className='w-[6vw] h-auto' />
+                        <p className='md:text-[2vh] md:w-[12vw] w-full' >24/7 bereikbaar</p>
 
                     </div>
 
-                    <div className='flex flex-col items-center text-center justify-center  w-40 '>
-                        <img src="/aset/images/car 3.png" alt="loading" />
-                        <p>
+                    <div className='flex flex-col items-center text-center justify-center   '>
+                        <img src="/aset/images/car 3.png" alt="loading" className='w-[6vw] h-auto' />
+                        <p className='md:text-[2vh] md:w-[12vw] w-full'>
                             Taxi vaak binnen 10 min
                         </p>
                     </div>
 
-                    <div className='flex flex-col items-center text-center justify-center  w-40 '>
-                        <img src="/aset/images/Group 329.png" alt="load.." />
+                    <div className='flex flex-col items-center text-center justify-center   '>
+                        <img src="/aset/images/Group 329.png" alt="load.." className='w-[6vw] h-auto' />
 
-                        <p>
+                        <p className='md:text-[2vh] md:w-[20vw] w-full'>
                             klantvriendelijke cahuffeurs
                         </p>
 
                     </div>
 
-                    <div className='flex flex-col items-center text-center justify-center  w-30 '>
-                        <img src="/aset/images/responsible 1.png" alt="" />
-                        <p>
+                    <div className='flex flex-col items-center text-center justify-center'>
+                        <img src="/aset/images/responsible 1.png" alt="" className='w-[6vw] h-auto  '/>
+                        <p className='md:text-[2vh] md:w-[12vw] w-full '>
                             Betrouwbare service
                         </p>
 
                     </div>
 
                 </div>
-                <div className='absolute  right-10  top-5'>
-                    <img src="/aset/images/contemporary-shiny-luxury-transportation-performan-2023-11-27-04-53-49-utc 1.png" alt="loading..." />
+                <div className='absolute  right-0  top-[15%]   '>
+                    <img src="/aset/images/contemporary-shiny-luxury-transportation-performan-2023-11-27-04-53-49-utc 1.png" alt="loading..." className='w-[70vw] h-auto ' />
                 </div>
-                <div className="  bg-white   ml-40 p-20 w-190 relative top-36  rounded-lg shadow-lg ">
+                <div className="  bg-white  sm:ml-40 sm:p-20 sm:w-190 relative top-36  rounded-lg shadow-lg ">
                     <h2 className=" border-l-2 p-5 border-[#ff8900] text-2xl font-bold text-center mb-4 text-black">Vaste Tarieven Vanuit Den Haag</h2>
 
                     <table className=" w-auto border-2 border-black text-white mt-10 ">
@@ -160,9 +163,9 @@ const Main = () => {
                         <tbody className="text-black">
                             {tableData.map((item, index) => (
                                 <tr className="" key={index}>
-                                    <td  className="px-6 py-3 border border-gray-500">{item.destination}</td>
-                                    <td  className="px-6 py-3 border border-gray-500">£{item.person1_4},-</td>
-                                    <td  className="px-6 py-3 border border-gray-500">£{item.person1_5},-</td>
+                                    <td className="px-6 py-3 border border-gray-500">{item.destination}</td>
+                                    <td className="px-6 py-3 border border-gray-500">£{item.person1_4},-</td>
+                                    <td className="px-6 py-3 border border-gray-500">£{item.person1_5},-</td>
                                 </tr>
                             ))}
 

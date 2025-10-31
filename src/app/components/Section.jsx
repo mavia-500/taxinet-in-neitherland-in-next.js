@@ -1,5 +1,6 @@
 import React from 'react'
 import { TiTickOutline } from "react-icons/ti";
+import ContactButton from './ui/ContactButton';
 
 const Section = () => {
     return (
@@ -33,13 +34,21 @@ const Section = () => {
                             TAXINET HAAGLANDEN IS DE TAXI SERVICE IN DE REGIO DEN HAAG
                         </h3>
 
-                        <button className="cursor-pointer mt-4 flex items-center justify-center bg-[#ff8900] hover:bg-yellow-500 text-white font-semibold px-4 py-2 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 w-fit">
+                        {/* <button className="cursor-pointer mt-4 flex items-center justify-center bg-[#ff8900] hover:bg-yellow-500 text-white font-semibold px-4 py-2 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 w-fit">
                             <TiTickOutline className="h-5 w-5 mx-1" /> Alle Taxidiensten
-                        </button>
+                        </button> */}
+                        <div>
+                            <ContactButton icon={<TiTickOutline className="h-5 w-5 mx-1" />} text="Alle Taxidiensten" classname="cursor-pointer mt-4  justify-center bg-[#ff8900] text-white font-semibold px-4 py-2 rounded-2xl " />
 
-                        <button className="cursor-pointer mt-4 flex items-center justify-center bg-black text-white font-semibold px-6 py-3 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 w-fit">
+                        </div>
+
+                        {/* <button className="cursor-pointer mt-4 flex items-center justify-center bg-black text-white font-semibold px-6 py-3 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 w-fit">
                             € ONZE TARIEVEN
-                        </button>
+                        </button> */}
+
+                        <div>
+                             <ContactButton  text="€ ONZE TARIEVEN" classname="cursor-pointer mt-4  justify-center bg-black text-white font-semibold px-9 rounded-2xl " />
+                        </div>
                     </div>
                 </div>
 
@@ -71,11 +80,11 @@ const Section = () => {
             <div className="bg-[#f8f1e9] flex flex-col md:flex-row justify-center items-center md:items-start p-6 md:p-10 gap-10">
                 {/* Left Image */}
                 <div className="md:w-1/2 flex   ">
-                    <div className=" w-3/4 sm:w-2/3 md:w-[60%]   rounded-md ">
+                    <div className=" w-3/4 sm:w-2/3 md:w-[60%]  border rounded-md ">
                         <img
                             src="/aset/images/image (1).png"
                             alt="Taxi driver"
-                            className=" w-full h-full  "
+                            className=" w-full h-full  border-l-14 border-b-14 border-[#ff8900]"
                         />
                     </div>
                 </div>

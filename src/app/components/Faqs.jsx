@@ -6,6 +6,7 @@ import { IoIosArrowForward } from "react-icons/io";
 import { FaMinusCircle } from "react-icons/fa";
 
 import { FaPlusCircle } from "react-icons/fa";
+import ContactButton from './ui/ContactButton';
 
 
 
@@ -46,6 +47,8 @@ const Faqs = () => {
                         <button className="flex item items-center shadow-amber-800 bg-[#ff8900] hover:bg-yellow-600 text-black font-semibold px-6 py-3 rounded-lg transition-all">
                             <IoCallOutline className='mr-3' /> 0858000365
                         </button>
+
+                        
                         <button className="flex items-center bg-transparent border border-[#ff8900] hover:bg-yellow-500 hover:text-black text-white font-semibold px-6 py-3 rounded-lg transition-all">
                             DIRECT RESERVEREN <IoIosArrowForward className='ml-3' />
 

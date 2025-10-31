@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from 'react';
+import ContactButton from './ui/ContactButton.jsx';
 import { IoCallOutline, IoMenu, IoClose } from 'react-icons/io5';
 
 const Header = () => {
@@ -81,10 +82,11 @@ const Header = () => {
 
                     <h3 className="text-white">Over Taxinet</h3>
 
-                    <button className="flex items-center gap-2 bg-[#ff8900] hover:bg-yellow-500 text-white font-semibold px-5 py-2 rounded-2xl shadow-md hover:shadow-lg">
-                        <IoCallOutline className="w-5 h-5" />
+                    {/* <button className="flex items-center gap-2 bg-[#ff8900] hover:bg-yellow-500 text-white font-semibold px-5 py-2 rounded-2xl shadow-md hover:shadow-lg">
+                        <IoCallOutline  />
                         Taxi Den Haag Contact
-                    </button>
+                    </button> */}
+                    <ContactButton text="Taxi Den Haag Contact" classname="bg-[#ff8900] text-white" icon={<IoCallOutline className="w-5 h-5 " />} />
                 </div>
             </div>
         </nav>

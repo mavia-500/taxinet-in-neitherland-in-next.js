@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import ContactButton from "./ui/ContactButton.jsx";
+import ContactButton from "./layout/home/ui/ContactButton.jsx";
 import { IoCallOutline, IoMenu, IoClose } from "react-icons/io5";
 
 const Header = () => {

@@ -1,9 +1,9 @@
 import React from "react";
 import { TiTickOutline } from "react-icons/ti";
-import ContactButton from "./ui/ContactButton";
-import PaymentPartners from "./layout/scm/PaymentPartners";
-import Card from "./ui/Card";
-import Image_Text from "./ui/Image_Text";
+import ContactButton from "./layout/home/ui/ContactButton";
+import PaymentPartners from "./layout/home/ui/PaymentPartners";
+import Card from "./layout/home/ui/Card";
+import Image_Text from "./layout/home/ui/Image_Text";
 
 const Section = () => {
   return (

@@ -1,10 +1,10 @@
 import React from 'react'
 import Header from '../components/Header'
-import Main from '../components/Main'
+import Main from '../components/layout/home/Main'
 import Section from '../components/Section'
-import Reviews from '../components/Reviews'
-import WorkingPartner from '../components/WorkingPartner'
-import Faqs from '../components/Faqs'
+import Reviews from '../components/layout/home/Reviews'
+import WorkingPartner from '../components/layout/home/WorkingPartner'
+import Faqs from '../components/layout/home/ui/Faqs'
 import Footer from '../components/Footer'
 
 const Homepage = () => {

@@ -3,7 +3,7 @@ import { IoCallOutline } from "react-icons/io5";
 import { IoEyeSharp } from "react-icons/io5";
 
 import ContactButton from "./ui/ContactButton";
-import BerkenForm from "./layout/scm/BerkenForm";
+import BerkenForm from "./ui/BerkenForm";
 
 import ImageLogs from "./ui/ImageLogs";
 

@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import Additional_Footer from "./layout/scm/Additional_Footer";
+import Additional_Footer from "./layout/home/ui/Additional_Footer";
 
 export default function Footer() {
   return (

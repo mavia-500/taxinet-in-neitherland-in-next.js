@@ -3,8 +3,8 @@ import React from "react";
 import { IoCallOutline } from "react-icons/io5";
 import { IoIosArrowForward } from "react-icons/io";
 
-import ContactButton from "./ui/ContactButton";
-import Faq_Data from "./layout/scm/Faq_Data";
+import ContactButton from "./ContactButton";
+import Faq_Data from "./Faq_Data";
 
 const Faqs = () => {
   return (

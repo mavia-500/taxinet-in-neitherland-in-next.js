@@ -1,6 +1,6 @@
 import React from "react";
 import { IoIosArrowForward } from "react-icons/io";
-import ContactButton from "../../ui/ContactButton";
+import ContactButton from "./ContactButton";
 
 const TablePrice = () => {
   const tableData = [

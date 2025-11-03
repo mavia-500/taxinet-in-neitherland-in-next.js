@@ -1,5 +1,5 @@
 import React from "react";
-import ContactButton from "../../ui/ContactButton";
+import ContactButton from "./ContactButton";
 import { GiTotem } from "react-icons/gi";
 
 const BerkenForm = () => {

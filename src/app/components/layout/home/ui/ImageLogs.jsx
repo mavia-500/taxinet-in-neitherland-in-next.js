@@ -1,5 +1,5 @@
 import React from "react";
-import TablePrice from "../layout/scm/TablePrice";
+import TablePrice from "./TablePrice";
 const ImageLogs = () => {
   return (
     <div className="relative    bg-black">

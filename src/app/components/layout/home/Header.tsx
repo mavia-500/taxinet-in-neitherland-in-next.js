@@ -1,18 +1,25 @@
 "use client";
 import React, { useState } from "react";
-import ContactButton from "./layout/home/ui/ContactButton.jsx";
+import ContactButton from "../../ui/ContactButton";
 import { IoCallOutline, IoMenu, IoClose } from "react-icons/io5";
+import { useTranslations  }   from "next-intl" ;
 
-const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+interface SelectGroup {
+  placeHolder: string;
+  options: string[];
+}
 
-  const toggleMenu = () => {
+const Header: React.FC = () => {
+  const t=useTranslations("home")
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+
+  const toggleMenu = (): void => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const selectGroups = [
+  const selectGroups: SelectGroup[] = [
     {
-      placeHolder: "taxiDiensten",
+      placeHolder: t('nav1'),
       options: ["Goedkope Taxi", "Luxe Taxi", "Groepsvervoer"],
     },
     {
@@ -38,8 +45,8 @@ const Header = () => {
   ];
 
   return (
-    <nav className="bg-[#1d1d1d]">
-      <div className="flex items-center bg-[#1d1d1d] text-white justify-around p-10">
+    <nav className="bg-[#1d1d1d] ">
+      <div className="flex container mx-auto items-center bg-[#1d1d1d] text-white justify-around p-10">
         {/* Logo */}
         <img
           src="/aset/logo/Taxinet logo 1 6.png"
@@ -49,7 +56,7 @@ const Header = () => {
 
         {/* Hamburger Icon for medium and small screens */}
         <div className="2xl:hidden">
-          <button onClick={toggleMenu} className=" text-white ">
+          <button onClick={toggleMenu} className="text-white">
             {isMenuOpen ? (
               <IoClose className="w-8 h-8" />
             ) : (
@@ -58,20 +65,20 @@ const Header = () => {
           </button>
         </div>
 
-        {/* Navigation Items - Hidden on medium and small screens unless menu is open */}
+        {/* Navigation Items */}
         <div
           className={`${isMenuOpen ? "flex" : "hidden"}
     2xl:flex flex-col 2xl:flex-row 2xl:items-center items-start text-white 
        gap-6  
     absolute 2xl:static top-20 left-0 w-full 2xl:w-auto 
-    bg-[#1d1d1d] 2xl:bg-transparent p-6 2xl:p-0 z-10`}
+    bg-[#1d1d1d]  p-6 2xl:p-0 z-10`}
         >
           {selectGroups.map((group, i) => (
             <select
               id={group.placeHolder}
               defaultValue={group.placeHolder}
               key={i}
-              className="bg-[#1d1d1d] text-white  lg:w-auto"
+              className="bg-[#1d1d1d] text-white lg:w-auto"
             >
               <option key={i} hidden>
                 {group.placeHolder}
@@ -89,7 +96,7 @@ const Header = () => {
           <ContactButton
             text="Taxi Den Haag Contact"
             classname="bg-[#ff8900] text-white"
-            icon={<IoCallOutline className="w-5 h-5 " />}
+            icon={<IoCallOutline className="w-5 h-5" />}
           />
         </div>
       </div>

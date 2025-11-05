@@ -1,15 +1,43 @@
 import React from "react";
 
-const Image_Text = () => {
+interface IconItem {
+  img: string;
+  text: string;
+}
+
+const Image_Text: React.FC = () => {
+  const icons: IconItem[] = [
+    {
+      img: "/aset/images/24-hours-support (1) 1 1.png",
+      text: "24/7 Bereikbaar, Ook Voor Luchthavenvervoer",
+    },
+    {
+      img: "/aset/images/24-hours-support (1) 1 1 (1).png",
+      text: "Taxi Often Within 10 Minutes",
+    },
+    {
+      img: "/aset/images/24-hours-support (1) 1 1 (2).png",
+      text: "Klantvriendelijke Chauffeurs",
+    },
+    {
+      img: "/aset/images/24-hours-support (1) 1 1 (3).png",
+      text: "Zeer Scherpe Tarieven",
+    },
+    {
+      img: "/aset/images/24-hours-support (1) 1 1 (4).png",
+      text: "Betrouwbare En Klantgerichte Service",
+    },
+  ];
+
   return (
     <div className="bg-[#f8f1e9] flex flex-col md:flex-row justify-center items-center md:items-start p-6 md:p-10 gap-10">
       {/* Left Image */}
-      <div className="md:w-1/2 flex   ">
-        <div className=" w-3/4 sm:w-2/3 md:w-[60%]  border rounded-md ">
+      <div className="md:w-1/2 flex">
+        <div className="w-3/4 sm:w-2/3 md:w-[60%] border rounded-md">
           <img
             src="/aset/images/image (1).png"
             alt="Taxi driver"
-            className=" w-full h-full  border-l-14 border-b-14 border-[#ff8900]"
+            className="w-full h-full border-l-14 border-b-14 border-[#ff8900]"
           />
         </div>
       </div>
@@ -38,28 +66,7 @@ const Image_Text = () => {
 
         {/* Icons Section */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-          {[
-            {
-              img: "/aset/images/24-hours-support (1) 1 1.png",
-              text: "24/7 Bereikbaar, Ook Voor Luchthavenvervoer",
-            },
-            {
-              img: "/aset/images/24-hours-support (1) 1 1 (1).png",
-              text: "Taxi Often Within 10 Minutes",
-            },
-            {
-              img: "/aset/images/24-hours-support (1) 1 1 (2).png",
-              text: "Klantvriendelijke Chauffeurs",
-            },
-            {
-              img: "/aset/images/24-hours-support (1) 1 1 (3).png",
-              text: "Zeer Scherpe Tarieven",
-            },
-            {
-              img: "/aset/images/24-hours-support (1) 1 1 (4).png",
-              text: "Betrouwbare En Klantgerichte Service",
-            },
-          ].map((item, idx) => (
+          {icons.map((item, idx) => (
             <div key={idx} className="flex items-start space-x-3 mt-4">
               <img src={item.img} alt="" className="w-10 h-10" />
               <p className="text-gray-800 text-sm">{item.text}</p>

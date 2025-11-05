@@ -2,7 +2,7 @@ import React from "react";
 import ContactButton from "./ContactButton";
 import { GiTotem } from "react-icons/gi";
 
-const BerkenForm = () => {
+const BerkenForm: React.FC = () => {
   return (
     <div className="bg-white text-black p-4 sm:p-6 border-2 border-black rounded-lg shadow-md">
       <div className="text-[#ff8900] font-bold mb-3 text-sm sm:text-base">
@@ -93,9 +93,9 @@ const BerkenForm = () => {
       </form>
 
       {/* SUBMIT BUTTON */}
-
-      <div className="flex tems-center justify-center">
+      <div className="flex items-center justify-center">
         <ContactButton
+        icon2={null}
           text="Acties Bekijken"
           icon={<GiTotem className="w-5 h-5" />}
           classname="i bg-[#ff8900] text-white border-2 rounded-lg border-amber-300"

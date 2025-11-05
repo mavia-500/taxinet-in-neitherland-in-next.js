@@ -1,16 +1,16 @@
 import React from "react";
 import { TiTickOutline } from "react-icons/ti";
-import ContactButton from "./layout/home/ui/ContactButton";
-import PaymentPartners from "./layout/home/ui/PaymentPartners";
-import Card from "./layout/home/ui/Card";
-import Image_Text from "./layout/home/ui/Image_Text";
+import ContactButton from "../../ui/ContactButton";
+import PaymentPartners from "../../ui/PaymentPartners";
+import Card from "../../ui/Card";
+import Image_Text from "../../ui/Image_Text";
 
-const Section = () => {
+const Section: React.FC = () => {
   return (
-    <div className="w-full overflow-hidden">
+    <div className="w-full overflow-hidden container mx-auto">
       {/* Payment Section */}
-
       <PaymentPartners />
+
       {/* Info Section */}
       <div className="flex flex-col lg:flex-row p-6 md:p-10 justify-around items-center gap-10 w-full">
         <div className="bg-[#2d2d2d] grid grid-cols-1 sm:grid-cols-2 rounded-lg w-full lg:w-3/5 h-auto">

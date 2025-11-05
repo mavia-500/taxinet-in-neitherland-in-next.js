@@ -2,8 +2,14 @@ import React from "react";
 import { IoIosArrowForward } from "react-icons/io";
 import ContactButton from "./ContactButton";
 
-const TablePrice = () => {
-  const tableData = [
+interface TableDataItem {
+  destination: string;
+  person1_4: number;
+  person1_5: number;
+}
+
+const TablePrice: React.FC = () => {
+  const tableData: TableDataItem[] = [
     {
       destination: "Taxi Rotterdam The Hague Airport",
       person1_4: 50,
@@ -13,23 +19,24 @@ const TablePrice = () => {
     { destination: "Taxi Eindhoven Airport", person1_4: 220, person1_5: 250 },
     { destination: "Taxi Lelystad Airport", person1_4: 220, person1_5: 250 },
   ];
+
   return (
-    <div className="  bg-white  sm:ml-40 sm:p-20 sm:w-190 relative top-36  rounded-lg shadow-lg ">
-      <h2 className=" border-l-2 p-5 border-[#ff8900] text-2xl font-bold text-center mb-4 text-black">
+    <div className="bg-white sm:ml-40 sm:p-20 sm:w-190 relative top-36 rounded-lg shadow-lg">
+      <h2 className="border-l-2 p-5 border-[#ff8900] text-2xl font-bold text-center mb-4 text-black">
         Vaste Tarieven Vanuit Den Haag
       </h2>
 
-      <table className=" w-auto border-2 border-black text-white mt-10 ">
+      <table className="w-auto border-2 border-black text-white mt-10">
         <thead className="border-2 border-black text-black">
           <tr className="bg-[#ff8900] text-white border-2 border-black">
-            <th className="px-6 py-3 text-left border ">Destination</th>
+            <th className="px-6 py-3 text-left border">Destination</th>
             <th className="px-6 py-3 text-left border">1-4 persoon</th>
             <th className="px-6 py-3 text-left border">1-5 persoon</th>
           </tr>
         </thead>
         <tbody className="text-black">
           {tableData.map((item, index) => (
-            <tr className="" key={index}>
+            <tr key={index}>
               <td className="px-6 py-3 border border-gray-500">
                 {item.destination}
               </td>

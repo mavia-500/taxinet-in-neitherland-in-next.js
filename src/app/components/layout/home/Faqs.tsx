@@ -3,13 +3,13 @@ import React from "react";
 import { IoCallOutline } from "react-icons/io5";
 import { IoIosArrowForward } from "react-icons/io";
 
-import ContactButton from "./ContactButton";
-import Faq_Data from "./Faq_Data";
+import ContactButton from "../../ui/ContactButton";
+import Faq_Data from "../../ui/Faq_Data";
 
-const Faqs = () => {
+const Faqs: React.FC = () => {
   return (
     <div className="bg-[#2a2a2a]">
-      <div className="p-10 flex justify-center">
+      <div className="p-10 flex justify-center container mx-auto">
         <div className="bg-black border-2 rounded-lg w-[90%] p-10 flex flex-col items-center text-center">
           <h3 className="text-white font-bold text-4xl mb-10">
             Klaar Om Nu Uw Taxi Te Boeken?

@@ -34,7 +34,6 @@ const Additional_Footer = () => {
                 <span>Voorwaarden | Privacy | Sitemap</span>
             </div>
         </div>
-
     )
 }
 

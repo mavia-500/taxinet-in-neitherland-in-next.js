@@ -1,16 +1,13 @@
 import React from "react";
-import { IoCallOutline } from "react-icons/io5";
-import { IoEyeSharp } from "react-icons/io5";
+import { IoCallOutline, IoEyeSharp } from "react-icons/io5";
+import ContactButton from "../../ui/ContactButton";
+import BerkenForm from "../../ui/BerkenForm";
+import ImageLogs from "../../ui/ImageLogs";
 
-import ContactButton from "./ui/ContactButton";
-import BerkenForm from "./ui/BerkenForm";
-
-import ImageLogs from "./ui/ImageLogs";
-
-const Main = () => {
+const Main: React.FC = () => {
   return (
-    <div className="bg-black  text-white ">
-      <div className="bg-black text-white">
+    <div className="bg-black text-white ">
+      <div className="bg-black text-white container mx-auto">
         <div className="grid md:grid-cols-2 sm:grid-cols-1 gap-10 p-6 sm:p-10 lg:p-16 xl:p-20 items-center">
           {/* LEFT SECTION */}
           <div>
@@ -64,7 +61,7 @@ const Main = () => {
               </p>
             </div>
 
-            <div className="">
+            <div>
               <BerkenForm />
             </div>
           </div>

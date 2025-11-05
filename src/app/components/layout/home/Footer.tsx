@@ -1,11 +1,11 @@
+import React from "react";
 import Link from "next/link";
+import Additional_Footer from "../../ui/Additional_Footer";
 
-import Additional_Footer from "./layout/home/ui/Additional_Footer";
-
-export default function Footer() {
+const Footer: React.FC = () => {
   return (
     <footer className="bg-black text-white py-16 px-10">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 container ">
         {/* Logo Section */}
         <div className="flex flex-col items-start">
           <img
@@ -91,4 +91,6 @@ export default function Footer() {
       <Additional_Footer />
     </footer>
   );
-}
+};
+
+export default Footer;

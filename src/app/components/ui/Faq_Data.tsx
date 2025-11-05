@@ -1,13 +1,14 @@
 "use client";
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
+import { FaMinusCircle, FaPlusCircle } from "react-icons/fa";
 
-import { FaMinusCircle } from "react-icons/fa";
+interface FaqItem {
+  question: string;
+  answer: string;
+}
 
-import { FaPlusCircle } from "react-icons/fa";
-
-const Faq_Data = () => {
-  const faqs = [
+const Faq_Data: React.FC = () => {
+  const faqs: FaqItem[] = [
     {
       question: "What is Increasy?",
       answer:
@@ -25,15 +26,16 @@ const Faq_Data = () => {
     },
   ];
 
-  const [openIndex, setOpenIndex] = useState(0); // First question open by default
+  const [openIndex, setOpenIndex] = useState<number | null>(0); // First question open by default
 
-  const toggleFaq = (index) => {
+  const toggleFaq = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
+
   return (
     <div className="min-h-screen bg-[#2a2a2a] flex items-center justify-center px-6">
       <div className="max-w-2xl w-full text-center">
-        <p className="text-[#ff8900] inline-block p-2  bg-black rounded-2xl">
+        <p className="text-[#ff8900] inline-block p-2 bg-black rounded-2xl">
           Vragen? Wij hebben antwoorden
         </p>
         <h2 className="text-white font-bold text-4xl mt-3 mb-10">
@@ -44,7 +46,7 @@ const Faq_Data = () => {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className=" rounded-xl p-5 bordershadow-lg transition-all"
+              className="rounded-xl p-5 bordershadow-lg transition-all"
             >
               <button
                 onClick={() => toggleFaq(index)}

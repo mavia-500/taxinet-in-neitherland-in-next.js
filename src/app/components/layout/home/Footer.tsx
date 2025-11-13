@@ -1,18 +1,42 @@
 import React from "react";
 import Link from "next/link";
-import Additional_Footer from "../../ui/Additional_Footer";
+import { GrMap } from "react-icons/gr";
+import { LuPhoneCall } from "react-icons/lu";
+import { SiGmail } from "react-icons/si";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-black text-white py-16 px-10">
+    <footer className="bg-black text-white py-16 px-10 relative container mx-auto rounded-2xl mt-20">
+      <img
+            src="/aset/images/Group 1000001863 (1).png"
+            alt="Taxinet Logo"
+            className="w-52 h-auto mb-4 absolute top rounded-2xl bg-white left-1/3 top-[-55]"
+          />
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 container ">
         {/* Logo Section */}
-        <div className="flex flex-col items-start">
-          <img
-            src="/aset/logo/Taxinet logo 1 6.png"
-            alt="Taxinet Logo"
-            className="w-32 h-auto mb-4"
-          />
+        <div className="flex flex-col items-start relative">
+          <Link
+            href="https://www.google.com/maps/place/Rederijkerstraat+159,+2531+VK+Den+Haag,+Netherlands"
+            className="flex items-center gap-2"
+          >
+            <GrMap className="text-xl" />
+            <span>Rederijkerstraat 159, 2531VK Den Haag, Nederland</span>
+          </Link>
+
+          <ul className="space-y-2 text-gray-300 md:absolute bottom-0 underline relative">
+            <li>
+              <Link href="/">Voorwaarden</Link>
+            </li>
+            <li>
+              <Link href="/">Privacy</Link>
+            </li>
+            <li>
+              <Link href="/">Sitemap</Link>
+            </li>
+            <li></li>
+          </ul>
+
+          
         </div>
 
         {/* Taxi Services */}
@@ -27,15 +51,7 @@ const Footer: React.FC = () => {
             <li>
               <Link href="/">Taxi Den Haag - Schiphol</Link>
             </li>
-            <li>
-              <Link href="/">Groepsvervoer</Link>
-            </li>
-            <li>
-              <Link href="/">Rolstoel Taxi</Link>
-            </li>
-            <li>
-              <Link href="/">Hotel Taxi Service</Link>
-            </li>
+           
           </ul>
         </div>
 
@@ -88,7 +104,7 @@ const Footer: React.FC = () => {
         </div>
       </div>
 
-      <Additional_Footer />
+      
     </footer>
   );
 };

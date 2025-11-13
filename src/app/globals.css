@@ -1,2 +1,40 @@
 @import "tailwindcss";
 
+.homeBackground{
+    background-image: url('/aset/images/Rectangle 89.png');
+}
+
+
+.bookBackground{
+    background-image: url('/aset/images/Rectangle 94 (1).png');
+    
+}
+
+.liningBackground{
+    background-image: url('/aset/images/Rectangle 93.png');
+    opacity: 9;
+
+
+   
+}
+
+
+/* Moves element from left to right */
+@keyframes marquee-right {
+  0% { transform: translateX(-50%); } /* start off-screen left */
+  100% { transform: translateX(0); } /* move off-screen right */
+}
+
+/* Moves element from right to left */
+@keyframes marquee-left {
+  0% { transform: translateX(50%); } /* start off-screen right */
+  100% { transform: translateX(-50%); } /* move off-screen left */
+}
+
+.animate-left {
+  animation: marquee-left 30s linear infinite;
+}
+
+.animate-right {
+  animation: marquee-right 30s linear infinite;
+}

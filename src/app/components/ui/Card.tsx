@@ -26,11 +26,11 @@ const cards: CardItem[] = [
 
 const Card: React.FC = () => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 p-6 md:p-16 place-items-center">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8  place-items-center">
       {cards.map((card, idx) => (
         <div
           key={idx}
-          className="border-2 border-[#ff8900] rounded-lg overflow-hidden w-full max-w-sm bg-white shadow-md hover:shadow-lg transition"
+          className="rounded-lg overflow-hidden w-full max-w-sm bg-white shadow-md hover:shadow-lg transition"
         >
           <img
             src={card.img}

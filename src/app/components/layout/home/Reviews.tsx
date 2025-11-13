@@ -1,3 +1,5 @@
+'use client';   // <-- add this if you are in the app directory
+
 import React from "react";
 import Image from "next/image";
 import { FaStar } from "react-icons/fa";
@@ -43,41 +45,95 @@ const Reviews: React.FC = () => {
     },
   ];
 
+  /* Duplicate the array so the marquee never shows a gap */
+  const infinite = [...testimonials, ...testimonials];
+
   return (
-    <section className="bg-[#2d2d2d]  text-white mt-15">
+    <section className="relative text-black mt-15 overflow-hidden p-10">
       <h2 className="text-center text-3xl font-bold p-10">
-        beoordelingen van klanten{" "}
+        beoordelingen van klanten
       </h2>
 
-      <div className="container  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mx-auto pb-10">
-        {testimonials.map((t, i) => (
-          <div
-            key={i}
-            className="bg-black p-6 rounded-2xl shadow-lg border border-gray-700"
-          >
-            <p className="text-gray-300 mb-4 border-b border-gray-600 pb-5">
-              {t.text}
-            </p>
+      {/* ---------- MARQUEE CONTAINER ---------- */}
+      <div className="overflow-hidden">
+        <div className="flex animate-right">
+          {infinite.map((t, i) => (
+            <div
+              key={i}
+              className="lg:min-w-1/4 bg-black p-6 rounded-2xl shadow-lg border border-gray-700 mx-4"
+                 // keep cards from collapsing
+            >
+              <p className="text-gray-300 mb-4 border-b border-gray-600 pb-5">
+                {t.text}
+              </p>
 
-            <div className="flex items-center gap-4 mt-4">
-              <div className="relative w-12 h-12 rounded-full overflow-hidden">
-                <Image src={t.img} alt={t.name} fill className="object-cover" />
-              </div>
-              <div>
-                <p className="font-semibold">{t.name}</p>
+              <div className="flex items-center gap-4 mt-4">  
+                <div className="relative w-12 h-12 rounded-full overflow-hidden text-white">
+                  <Image
+                    src={t.img}
+                    alt={t.name}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div>
+                  <p className="font-semibold text-white">{t.name}</p>
 
-                <div className="flex text-yellow-400 mt-1">
-                  {Array(5)
-                    .fill(null)
-                    .map((_, idx) => (
-                      <FaStar key={idx} className="mx-1" />
-                    ))}
+                  <div className="flex text-yellow-400 mt-1">
+                    {Array(5)
+                      .fill(null)
+                      .map((_, idx) => (
+                        <FaStar key={idx} className="mx-1" />
+                      ))}
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
+
+
+      <div className="overflow-hidden  mt-10">
+        <div className="flex animate-left translate-x-[-50%] ">
+          {infinite.map((t, i) => (
+            <div
+              key={i}
+              className="lg:min-w-1/4 bg-black p-6 rounded-2xl shadow-lg border border-gray-700 mx-4  "
+                 // keep cards from collapsing
+            >
+              <p className="text-gray-300 mb-4 border-b border-gray-600 pb-5  ">
+                {t.text}
+              </p>
+
+              <div className="flex items-center gap-4 mt-4">  
+                <div className="relative w-12 h-12 rounded-full overflow-hidden text-white">
+                  <Image
+                    src={t.img}
+                    alt={t.name}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div>
+                  <p className="font-semibold text-white">{t.name}</p>
+
+                  <div className="flex text-yellow-400 mt-1">
+                    {Array(5)
+                      .fill(null)
+                      .map((_, idx) => (
+                        <FaStar key={idx} className="mx-1" />
+                      ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* ---------- TAILWIND ANIMATION ---------- */}
+      
     </section>
   );
 };

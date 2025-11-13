@@ -13,11 +13,11 @@ const PaymentPartners: React.FC = () => {
   ];
 
   return (
-    <div className="flex flex-col md:flex-row justify-around items-center gap-10 p-6 md:p-16 mt-40 text-center md:text-left">
+    <div className="flex flex-col  justify-center   ">
       <h2 className="text-black font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
         Wij accepteren alle soorten online betalingen
       </h2>
-      <div className="grid grid-cols-3 sm:grid-cols-4 gap-4 md:gap-6">
+      <div className="grid grid-cols-3 sm:grid-cols-4  md:gap-6 ">
         {imagePaths.map((src: string, index: number) => (
           <img
             key={index}

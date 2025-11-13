@@ -30,51 +30,55 @@ const Image_Text: React.FC = () => {
   ];
 
   return (
-    <div className="bg-[#f8f1e9] flex flex-col md:flex-row justify-center items-center md:items-start p-6 md:p-10 gap-10">
-      {/* Left Image */}
-      <div className="md:w-1/2 flex">
-        <div className="w-3/4 sm:w-2/3 md:w-[60%] border rounded-md">
-          <img
-            src="/aset/images/image (1).png"
-            alt="Taxi driver"
-            className="w-full h-full border-l-14 border-b-14 border-[#ff8900]"
-          />
-        </div>
+   <div className="container mx-auto mt-20 p-10 rounded-2xl  homeBackground bg-cover">
+{/* Wrapper */}
+  <div className="flex flex-col lg:flex-row ">
+
+    {/* LEFT SIDE (IMAGE 50%) */}
+    <div className="w-full lg:w-1/2  overflow-hidden  ">
+      
+      <img
+        src="/aset/images/47ce5837e4ede89591c73956bd0303af3e27f649.jpg"
+        alt="Taxi driver"
+        className="w-full h-[70vh]  object-contain "
+      />
       </div>
 
-      {/* Right Content */}
-      <div className="md:w-[45%] space-y-5">
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
-          Reserveer 24/7 uw taxi in Den Haag en omstreken
-        </h2>
+    {/* RIGHT SIDE (TEXT 50%) */}
+    <div className="w-full lg:w-1/2 space-y-5 mt-8 lg:mt-0">
+      <h2 className="text-2xl md:text-3xl font-bold text-white">
+        Reserveer 24/7 uw taxi in Den Haag en omstreken
+      </h2>
 
-        <p className="text-gray-700 leading-relaxed">
-          Individueel vervoer of groepsvervoer binnen en buiten Den Haag behoren
-          beiden tot ons aanbod. Ook biedt Taxinet Haaglanden leerlingenvervoer,
-          trouwvervoer, Schiphol taxi, groepsvervoer, zakelijk vervoer,
-          rolstoeltaxi en hotel taxiservice aan. U kunt stiptheid en veilige
-          betaalmogelijkheden van ons verwachten. Bovendien staan we 24 uur per
-          dag en 7 dagen in de week voor u klaar. Bel ons op
-          <span className="font-bold text-black"> 0858000365 </span>
-          en u ziet onze taxi in Den Haag en omstreken snel verschijnen!
-        </p>
+      <p className="text-white leading-relaxed">
+        Individueel vervoer of groepsvervoer binnen en buiten Den Haag behoren
+        beiden tot ons aanbod. Ook biedt Taxinet Haaglanden leerlingenvervoer,
+        trouwvervoer, Schiphol taxi, groepsvervoer, zakelijk vervoer,
+        rolstoeltaxi en hotel taxiservice aan. U kunt stiptheid en veilige
+        betaalmogelijkheden van ons verwachten. Bovendien staan we 24 uur per
+        dag en 7 dagen in de week voor u klaar. Bel ons op
+        <span className="font-bold text-white"> 0858000365 </span>
+        en u ziet onze taxi in Den Haag en omstreken snel verschijnen!
+      </p>
 
-        <p className="text-gray-700 leading-relaxed">
-          Al jarenlang brengt Taxinet Haaglanden u 24/7 naar de gewenste
-          bestemming.
-        </p>
+      <p className="text-white leading-relaxed">
+        Al jarenlang brengt Taxinet Haaglanden u 24/7 naar de gewenste bestemming.
+      </p>
 
-        {/* Icons Section */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-          {icons.map((item, idx) => (
-            <div key={idx} className="flex items-start space-x-3 mt-4">
-              <img src={item.img} alt="" className="w-10 h-10" />
-              <p className="text-gray-800 text-sm">{item.text}</p>
-            </div>
-          ))}
-        </div>
+      {/* Icons */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        {icons.map((item, idx) => (
+          <div key={idx} className="flex items-start space-x-3 mt-4 t">
+            <img src={item.img} alt="" className="w-10 h-10 fill-white " />
+            <p className="text-white text-sm">{item.text}</p>
+          </div>
+        ))}
       </div>
     </div>
+
+  </div>
+</div>
+
   );
 };
 

@@ -2,7 +2,9 @@
 import React, { useState } from "react";
 import ContactButton from "../../ui/ContactButton";
 import { IoCallOutline, IoMenu, IoClose } from "react-icons/io5";
-import { useTranslations  }   from "next-intl" ;
+import { useTranslations } from "next-intl";
+import Main from "./Main";
+import Section from "./Section";
 
 interface SelectGroup {
   placeHolder: string;
@@ -10,7 +12,7 @@ interface SelectGroup {
 }
 
 const Header: React.FC = () => {
-  const t=useTranslations("home")
+  const t = useTranslations("home");
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   const toggleMenu = (): void => {
@@ -19,88 +21,106 @@ const Header: React.FC = () => {
 
   const selectGroups: SelectGroup[] = [
     {
-      placeHolder: t('nav1'),
+      placeHolder: "taxi Diensten",
       options: ["Goedkope Taxi", "Luxe Taxi", "Groepsvervoer"],
     },
     {
-      placeHolder: "taxi service",
-      options: ["24/7 Service", "Zakelijke Taxi", "Privé Chauffeur"],
+      placeHolder: "Taxiprijzen",
+      options: ["Taxi Den Haag", "Taxi Rijswijk", "taxi voorburg","taxi scheveningen","taxi wassenaar","taxi leidschendam"," taxi nootdorp "," taxi wateringen "],
     },
     {
-      placeHolder: "Taxi Tarieven Den Haag",
+      placeHolder: "Boek een rit",
       options: ["Binnenstad", "Luchthaven", "Langere ritten"],
     },
     {
-      placeHolder: "Taxi Bestellen",
+      placeHolder: "Luchthaventaxi",
       options: ["Online", "Telefonisch", "App"],
     },
     {
-      placeHolder: "Airport Taxi",
+      placeHolder: "Taxibedrijven",
       options: ["Schiphol", "Rotterdam The Hague", "Eindhoven"],
     },
     {
-      placeHolder: "Taxi Bedrijven",
+      placeHolder: "Over Taxinet",
       options: ["Taxinet", "HTMC", "CityTaxi"],
     },
   ];
 
   return (
-    <nav className="bg-[#1d1d1d] ">
-      <div className="flex container mx-auto items-center bg-[#1d1d1d] text-white justify-around p-10">
-        {/* Logo */}
-        <img
-          src="/aset/logo/Taxinet logo 1 6.png"
-          className="w-30 h-auto"
-          alt="Taxinet Logo"
-        />
+    <div>
+      <div className="overflow-hidden relative h-full ">
+        {" "}
+        <div className="w-full  ">
+          <nav className="">
+            <video
+              className=" min-w-full  object-cover -z-10 absolute  h-full "
+              src="/aset/videos/Comp 1_1 (1).mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="auto"
+            ></video>
+            <div className="flex container mx-auto items-center  text-white justify-around p-10">
+              {/* Logo */}
+              <img
+                src="/aset/logo/Taxinet logo 1 6.png"
+                className="w-30 h-auto"
+                alt="Taxinet Logo"
+              />
 
-        {/* Hamburger Icon for medium and small screens */}
-        <div className="2xl:hidden">
-          <button onClick={toggleMenu} className="text-white">
-            {isMenuOpen ? (
-              <IoClose className="w-8 h-8" />
-            ) : (
-              <IoMenu className="w-8 h-8" />
-            )}
-          </button>
+              {/* Hamburger Icon for medium and small screens */}
+              <div className="2xl:hidden">
+                <button onClick={toggleMenu} className="text-white">
+                  {isMenuOpen ? (
+                    <IoClose className="w-8 h-8" />
+                  ) : (
+                    <IoMenu className="w-8 h-8" />
+                  )}
+                </button>
+              </div>
+
+              {/* Navigation Items */}
+              <div
+                className={`${isMenuOpen ? "flex" : "hidden"}
+               2xl:flex flex-col 2xl:flex-row 2xl:items-center items-start text-white 
+              gap-6  
+           2xl:static top-20 left-0 w-full 2xl:w-auto 
+                  p-6 2xl:p-0 z-10`}
+              >
+                {selectGroups.map((group, i) => (
+                  <select
+                    id={group.placeHolder}
+                    defaultValue={group.placeHolder}
+                    key={i}
+                    className=" text-white lg:w-auto"
+                  >
+                    <option key={i} hidden>
+                      {group.placeHolder}
+                    </option>
+                    {group.options.map((opt, j) => (
+                      <option key={j} className="text-black">
+                        {opt}
+                      </option>
+                    ))}
+                  </select>
+                ))}
+
+                <h3 className="text-white">Over Taxinet</h3>
+
+                <ContactButton
+                  text="Taxi Den Haag Contact"
+                  classname="bg-[#ff8900] text-white"
+                  icon={<IoCallOutline className="w-5 h-5" />}
+                />
+              </div>
+            </div>
+          </nav>
+          <Main />
         </div>
-
-        {/* Navigation Items */}
-        <div
-          className={`${isMenuOpen ? "flex" : "hidden"}
-    2xl:flex flex-col 2xl:flex-row 2xl:items-center items-start text-white 
-       gap-6  
-    absolute 2xl:static top-20 left-0 w-full 2xl:w-auto 
-    bg-[#1d1d1d]  p-6 2xl:p-0 z-10`}
-        >
-          {selectGroups.map((group, i) => (
-            <select
-              id={group.placeHolder}
-              defaultValue={group.placeHolder}
-              key={i}
-              className="bg-[#1d1d1d] text-white lg:w-auto"
-            >
-              <option key={i} hidden>
-                {group.placeHolder}
-              </option>
-              {group.options.map((opt, j) => (
-                <option key={j} className="text-black">
-                  {opt}
-                </option>
-              ))}
-            </select>
-          ))}
-
-          <h3 className="text-white">Over Taxinet</h3>
-
-          <ContactButton
-            text="Taxi Den Haag Contact"
-            classname="bg-[#ff8900] text-white"
-            icon={<IoCallOutline className="w-5 h-5" />}
-          />
-        </div>
+        {/* <Section /> */}
       </div>
-    </nav>
+    </div>
   );
 };
 

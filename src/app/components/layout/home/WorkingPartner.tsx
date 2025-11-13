@@ -10,7 +10,7 @@ const WorkingPartner: React.FC = () => {
   ];
 
   return (
-    <div className="container mx-auto p-10 sm:p-6 flex flex-wrap items-center justify-center gap-8 sm:gap-4">
+    <div className="container mx-auto p-10 sm:p-6 flex flex-wrap items-center justify-evenly gap-8 sm:gap-14">
       {logos.map((src: string, index: number) => (
         <img
           key={index}

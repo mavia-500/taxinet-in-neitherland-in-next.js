@@ -6,8 +6,8 @@ import ImageLogs from "../../ui/ImageLogs";
 
 const Main: React.FC = () => {
   return (
-    <div className="bg-black text-white ">
-      <div className="bg-black text-white container mx-auto">
+    <div className=" text-white ">
+      <div className=" text-white container mx-auto ">
         <div className="grid md:grid-cols-2 sm:grid-cols-1 gap-10 p-6 sm:p-10 lg:p-16 xl:p-20 items-center">
           {/* LEFT SECTION */}
           <div>
@@ -68,7 +68,7 @@ const Main: React.FC = () => {
         </div>
       </div>
 
-      <ImageLogs />
+      
     </div>
   );
 };

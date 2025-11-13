@@ -31,10 +31,18 @@
   100% { transform: translateX(-50%); } /* move off-screen left */
 }
 
+@keyframes marquee-logo {
+  0% { transform: translateX(10%); } /* start off-screen right */
+  100% { transform: translateX(100%); } /* move off-screen left */
+}
+
 .animate-left {
   animation: marquee-left 30s linear infinite;
 }
 
 .animate-right {
   animation: marquee-right 30s linear infinite;
+}
+.animate-logo {
+  animation:marquee-logo 30s linear infinite
 }

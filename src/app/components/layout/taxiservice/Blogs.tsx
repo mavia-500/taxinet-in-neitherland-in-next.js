@@ -28,7 +28,7 @@ const Blogs = ({data=[]}) => {
             <div className="flex-1">
               <div className=" relative w-full min-h-[250px] h-64 md:h-80 rounded-lg overflow-hidden">
                 <Image
-                  src={item.image}
+                  src={`/aset/taxiServiceImages/${item.image}`}
                   alt={item.title}
                   width={800}
                   height={600}

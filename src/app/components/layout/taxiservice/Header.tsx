@@ -11,7 +11,7 @@ const Header: React.FC = () => {
     <section
       className="bg-cover bg-center h-screen flex items-center justify-center sm:h-[70vh]"
       style={{
-        backgroundImage: "url('/aset/taxiServiceImages/Rectangle 47.png')",
+        backgroundImage: "url('/aset/taxiServiceImages/Group 341.png')",
       }}
     >
       {/* Dark overlay */}

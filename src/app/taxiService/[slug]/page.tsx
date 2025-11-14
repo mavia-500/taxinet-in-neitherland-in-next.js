@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Nav from "../../components/ui/Nav";
 import Header from "../../components/layout/taxiservice/Header";
@@ -6,26 +8,33 @@ import Blogs from "../../components/layout/taxiservice/Blogs";
 import ContactButton from "../../components/ui/ContactButton";
 import { FaPhoneAlt } from "react-icons/fa";
 import Footer from "../../components/layout/home/Footer";
-import { BlogData } from "../../data/BlogData";
+import { BlogData } from "../../data/TaxiServiceData";
+import { useParams } from "next/navigation";
 
 const page = () => {
-  console.log(BlogData);
+  const params = useParams();
+
+  const city = Array.isArray(params.slug) ? params.slug[0] : params.slug;
+
+  console.log("params", city);
+  const selectedBlog = BlogData[city];
+  console.log(selectedBlog);
   return (
     <div className="">
       <div className="bg-black">
         <Nav />
       </div>
-      <Header />
+      <Header headerText={selectedBlog.headerText} headerImage={selectedBlog.headerImage}/>
       <ServicesWithLogos />
       <div className="bg-black p-10">
         <div className="container mx-auto">
-          <Blogs data={BlogData.taxidenhaag.blog1} />
+          <Blogs data={selectedBlog.blog1} imagefolder={city} />
           <ContactButton
             text="online reserveren"
             classname="text-black bg-white rounded-xl  mt-10 py-6 px-7 cursor-pointer"
           />
-          <div className="mt-10">
-            <Blogs data={BlogData.taxidenhaag.blog2} />
+          <div className="mt-10 ">
+            <Blogs data={selectedBlog.blog2} imagefolder={city} />
           </div>
         </div>
       </div>
@@ -43,7 +52,7 @@ const page = () => {
       </div>
 
       <div className="bg-black p-10">
-        <Blogs data={BlogData.taxidenhaag.blog3} />
+        <Blogs data={selectedBlog.blog3} imagefolder={city} />
       </div>
 
       <div className="bg-black h-screen flex items-center justify-center text-center">
@@ -61,7 +70,7 @@ const page = () => {
 
       <div className="bg-black p-10">
         <div className="container mx-auto">
-          <Blogs data={BlogData.taxidenhaag.blog4} />
+          <Blogs data={selectedBlog.blog4} imagefolder={city} />
         </div>
       </div>
 

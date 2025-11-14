@@ -1,9 +1,10 @@
 import React from "react";
 import Image from "next/image";
-import { BlogData } from "../../../data/BlogData";
+import { BlogData } from "../../../data/TaxiServiceData";
 
-const Blogs = ({data=[]}) => {
+const Blogs = ({data=[],imagefolder}) => {
     console.log(data)
+    console.log(imagefolder)
   return (
     <main className="bg-black text-white   container mx-auto">
       <div className="  space-y-20">
@@ -26,13 +27,13 @@ const Blogs = ({data=[]}) => {
 
             {/* Image */}
             <div className="flex-1">
-              <div className=" relative w-full min-h-[250px] h-64 md:h-80 rounded-lg overflow-hidden">
+              <div className=" relative w-full min-h-[250px] h-64 md:h-80  rounded-lg overflow-hidden">
                 <Image
-                  src={`/aset/taxiServiceImages/${item.image}`}
+                  src={`/aset/taxiServiceImages/${imagefolder}/${item.image}`}
                   alt={item.title}
                   width={800}
-                  height={600}
-                  className="object-cover"
+                  height={800}
+                  className="object-contain w-full h-full"
                 />
               </div>
             </div>

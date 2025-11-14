@@ -1,7 +1,6 @@
 "use client";
-import React from "react";
-import { useState } from "react";
-import { IoCallOutline, IoMenu, IoClose } from "react-icons/io5";
+import React, { useState } from "react";
+import { IoCallOutline, IoMenu, IoClose, IoChevronDown } from "react-icons/io5";
 import ContactButton from "./ContactButton";
 import Link from "next/link";
 
@@ -12,9 +11,14 @@ interface SelectGroup {
 
 const Nav: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const [openDropdown, setOpenDropdown] = useState<number | null>(null);
 
   const toggleMenu = (): void => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const toggleDropdown = (index: number) => {
+    setOpenDropdown(openDropdown === index ? null : index);
   };
 
   const selectGroups: SelectGroup[] = [
@@ -23,7 +27,7 @@ const Nav: React.FC = () => {
       options: ["Goedkope Taxi", "Luxe Taxi", "Groepsvervoer"],
     },
     {
-      placeHolder: "Taxiprijzen",
+      placeHolder: "Taxi Service",
       options: [
         "Taxi Den Haag",
         "Taxi Rijswijk",
@@ -31,8 +35,8 @@ const Nav: React.FC = () => {
         "taxi scheveningen",
         "taxi wassenaar",
         "taxi leidschendam",
-        " taxi nootdorp ",
-        " taxi wateringen ",
+        "taxi nootdorp",
+        "taxi wateringen",
       ],
     },
     {
@@ -52,18 +56,21 @@ const Nav: React.FC = () => {
       options: ["Taxinet", "HTMC", "CityTaxi"],
     },
   ];
+
   return (
-    <div className="w-full  ">
-      <nav className="">
-        <div className="flex container mx-auto items-center  text-white justify-around p-10">
+    <div className="w-full">
+      <nav>
+        <div className="flex container mx-auto items-center text-white justify-around p-10">
           {/* Logo */}
+        <Link href={'/home'}>
           <img
             src="/aset/logo/Taxinet logo 1 6.png"
             className="w-30 h-auto"
             alt="Taxinet Logo"
           />
+          </Link>
 
-          {/* Hamburger Icon for medium and small screens */}
+          {/* Hamburger Icon */}
           <div className="2xl:hidden">
             <button onClick={toggleMenu} className="text-white">
               {isMenuOpen ? (
@@ -76,30 +83,40 @@ const Nav: React.FC = () => {
 
           {/* Navigation Items */}
           <div
-            className={`${isMenuOpen ? "flex" : "hidden"}
-               2xl:flex flex-col 2xl:flex-row 2xl:items-center items-start text-white 
-              gap-6  2xl:static top-20 left-0 w-full 2xl:w-auto 
-                  p-6 2xl:p-0 z-10`}
+            className={`${
+              isMenuOpen ? "flex" : "hidden"
+            } 2xl:flex flex-col 2xl:flex-row 2xl:items-center items-start text-white 
+              gap-6 2xl:static top-20 left-0 w-full 2xl:w-auto p-6 2xl:p-0 z-10`}
           >
+            {/* Dropdown Menus */}
             {selectGroups.map((group, i) => (
-              <select
-                id={group.placeHolder}
-                defaultValue={group.placeHolder}
-                key={i}
-                className=" text-white lg:w-auto"
-              >
-                <option key={i} hidden>
-                  {group.placeHolder}
-                </option>
+              <div key={i} className="relative">
+                {/* Top Level Button */}
+                <button
+                  onClick={() => toggleDropdown(i)}
+                  className={`flex items-center gap-2  ${openDropdown === i ? "text-[#ff8900]" : "text-white"}`}
 
-                {group.options.map((opt, j) => (
-                  <Link href={`/${group.placeHolder}/${opt}`}>
-                    <option key={j} className="text-black">
-                      {opt}
-                    </option>
-                  </Link>
-                ))}
-              </select>
+                >
+                  {group.placeHolder}
+                  <IoChevronDown className="w-4 h-4" />
+                </button>
+
+                {/* Dropdown List */}
+                {openDropdown === i && (
+                  <ul className="absolute bg-white text-black mt-2 rounded shadow-md p-2 w-40">
+                    {group.options.map((opt, j) => (
+                      <li key={j} className="py-1 px-2 hover:bg-gray-100">
+                        <Link
+                          href={`/${group.placeHolder.toLowerCase().replace(/\s+/g,"")}/${opt.toLowerCase().replace(/\s+/g, "")}`}
+                          className="block"
+                        >
+                          {opt}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
             ))}
 
             <h3 className="text-white">Over Taxinet</h3>

@@ -4,21 +4,20 @@ import ContactButton from "../../ui/ContactButton";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdKeyboardArrowRight } from "react-icons/md";
 
-const Header: React.FC = () => {
-  const headerImage = "Rectangle 47.png";
-  const headrText = "Taxi den haag";
+const Header = ({headerText,headerImage}) => {
+  console.log("image",headerImage)
   return (
     <section
       className="bg-cover bg-center h-screen flex items-center justify-center sm:h-[70vh]"
       style={{
-        backgroundImage: "url('/aset/taxiServiceImages/Group 341.png')",
+        backgroundImage: `url("/aset/taxiServiceImages/${headerImage}")`,
       }}
     >
       {/* Dark overlay */}
 
       <div className="  text-center text-white px-4">
         {/* Heading */}
-        <h1 className="text-5xl md:text-6xl font-bold mb-10">TAXI DEN HAAG</h1>
+        <h1 className="text-5xl md:text-6xl font-bold mb-10">{headerText}</h1>
 
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

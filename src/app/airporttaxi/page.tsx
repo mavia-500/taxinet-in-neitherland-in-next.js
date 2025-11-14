@@ -20,7 +20,7 @@ const page = () => {
       </div>
       <IconsBar/>
 
-      <Blogs />
+      {/* <Blogs /> */}
     </div>
   )
 }

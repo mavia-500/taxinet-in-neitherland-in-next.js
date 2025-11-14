@@ -1,7 +1,7 @@
 export const BlogData = {
   taxidenhaag: {
     headerImage: "Group 341.png",
-    headerText: "Taxi Den Haag",
+    headerText: "Taxi Den Haag oka",
 
     blog1: [
       {

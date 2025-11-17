@@ -35,11 +35,12 @@ const page = () => {
         <Nav />
       </div>
 
-      {imgaeRootFolder === "taxiservice" || city === "leerlingenvervoer" ? (
+      { city === "leerlingenvervoer" ? (
         <TaxiServiceHero
           headerText={selectedBlog.headerText}
           headerImage={selectedBlog.headerImage}
           imgaeRootFolder={imgaeRootFolder}
+          
         />
       ) : (
         <Hero2Buttons
@@ -58,7 +59,7 @@ const page = () => {
             imgaeRootFolder={imgaeRootFolder}
           />
 
-          {(imgaeRootFolder === "taxiservice" || city === "groepsvervoer") && (
+          {( city === "groepsvervoer") && (
             <ContactButton
               text="online reserveren"
               classname={

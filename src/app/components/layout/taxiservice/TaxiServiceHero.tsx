@@ -7,7 +7,8 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 const TaxiServiceHero = ({
   headerText,
   headerImage,
-  imgaeRootFolder
+  imgaeRootFolder,
+  
   
 }) => {
  console.log("root",imgaeRootFolder)
@@ -39,7 +40,7 @@ const TaxiServiceHero = ({
 
           {/* Acties button */}
 
-          
+         
             <ContactButton
               text="Acties Bekijken"
               classname="hover:bg-gray-900 text-white px-6 py-3 rounded-lg font-semibold transition bg-black"
@@ -51,7 +52,7 @@ const TaxiServiceHero = ({
           
             <ContactButton
               text="DIRECT RESERVEREN"
-              classname=" bg-white text-black border hover:bg-blue-50 px-6 py-3 rounded-lg font-semibold transition text-sm"
+              classname={headerText==="LEERLINGENVERVOER" ? " bg-amber-500 text-black border hover:bg-blue-50 px-6 py-3 rounded-lg font-semibold transition text-sm" :" bg-white text-black border hover:bg-blue-50 px-6 py-3 rounded-lg font-semibold transition text-sm"}
               icon2={<MdKeyboardArrowRight />}
             />
           

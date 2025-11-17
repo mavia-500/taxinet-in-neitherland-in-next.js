@@ -24,7 +24,15 @@ const Nav: React.FC = () => {
   const selectGroups: SelectGroup[] = [
     {
       placeHolder: "taxi Diensten",
-      options: ["Goedkope Taxi", "Luxe Taxi", "Groepsvervoer"],
+      options: [
+        "leerlingenvervoer",
+        "Trouwvervoer",
+        "taxi den haag _ schiphol",
+        "groepsvervoer",
+        "zakelijk vervoer",
+        "rolstoel taxi",
+        "hotel taxi service",
+      ],
     },
     {
       placeHolder: "Taxi Service",
@@ -48,7 +56,7 @@ const Nav: React.FC = () => {
       options: ["Online", "Telefonisch", "App"],
     },
     {
-      placeHolder: "Taxibedrijven",
+      placeHolder: "Airport Taxi",
       options: ["Schiphol", "Rotterdam The Hague", "Eindhoven"],
     },
     {
@@ -62,12 +70,12 @@ const Nav: React.FC = () => {
       <nav>
         <div className="flex container mx-auto items-center text-white justify-around p-10">
           {/* Logo */}
-        <Link href={'/home'}>
-          <img
-            src="/aset/logo/Taxinet logo 1 6.png"
-            className="w-30 h-auto"
-            alt="Taxinet Logo"
-          />
+          <Link href={"/home"}>
+            <img
+              src="/aset/logo/Taxinet logo 1 6.png"
+              className="w-30 h-auto"
+              alt="Taxinet Logo"
+            />
           </Link>
 
           {/* Hamburger Icon */}
@@ -94,8 +102,9 @@ const Nav: React.FC = () => {
                 {/* Top Level Button */}
                 <button
                   onClick={() => toggleDropdown(i)}
-                  className={`flex items-center gap-2  ${openDropdown === i ? "text-[#ff8900]" : "text-white"}`}
-
+                  className={`flex items-center gap-2  ${
+                    openDropdown === i ? "text-[#ff8900]" : "text-white"
+                  }`}
                 >
                   {group.placeHolder}
                   <IoChevronDown className="w-4 h-4" />
@@ -107,7 +116,11 @@ const Nav: React.FC = () => {
                     {group.options.map((opt, j) => (
                       <li key={j} className="py-1 px-2 hover:bg-gray-100">
                         <Link
-                          href={`/${group.placeHolder.toLowerCase().replace(/\s+/g,"")}/${opt.toLowerCase().replace(/\s+/g, "")}`}
+                          href={`/${group.placeHolder
+                            .toLowerCase()
+                            .replace(/\s+/g, "")}/${opt
+                            .toLowerCase()
+                            .replace(/\s+/g, "")}`}
                           className="block"
                         >
                           {opt}

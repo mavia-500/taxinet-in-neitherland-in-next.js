@@ -1,8 +1,8 @@
 export const BlogData = {
   taxidenhaag: {
     headerImage: "Group 341.png",
-    headerText: "Taxi Den Haag oka",
-
+    headerText: "Taxi Den Haag ",
+   
     blog1: [
       {
         id: 1,
@@ -414,8 +414,7 @@ Wij zijn een van de grootste TTO-houders (Toegelaten Taxi Organisatie) in de reg
     ],
   },
 
-
-   taxiwateringen : {
+  taxiwateringen: {
     headerImage: "4c32a8652bf51aeb38f6e85fb05bea91d0f31961.jpg",
     headerText: "TAXI WATERINGEN",
 

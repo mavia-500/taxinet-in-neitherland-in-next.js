@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { BlogData } from "../../../data/TaxiServiceData";
 
-const Blogs = ({data=[],imagefolder}) => {
+const Blogs = ({data=[],imagefolder,imgaeRootFolder}) => {
     console.log(data)
     console.log(imagefolder)
   return (
@@ -29,7 +29,7 @@ const Blogs = ({data=[],imagefolder}) => {
             <div className="flex-1">
               <div className=" relative w-full min-h-[250px] h-64 md:h-80  rounded-lg overflow-hidden">
                 <Image
-                  src={`/aset/taxiServiceImages/${imagefolder}/${item.image}`}
+                  src={`/aset/${imgaeRootFolder}/${imagefolder}/${item.image}`}
                   alt={item.title}
                   width={800}
                   height={800}

@@ -8,6 +8,7 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 const  Hero2Buttons = ({
   headerText,
   headerImage,
+  imgaeRootFolder
   
 }) => {
   // console.log(buttonClassName);
@@ -15,7 +16,7 @@ const  Hero2Buttons = ({
     <section
       className="bg-cover bg-center h-screen flex items-center justify-center sm:h-[70vh]"
       style={{
-        backgroundImage: `url("/aset/taxiServiceImages/${headerImage}")`,
+        backgroundImage: `url("/aset/${imgaeRootFolder}/${headerImage}")`,
       }}
     >
       {/* Dark overlay */}

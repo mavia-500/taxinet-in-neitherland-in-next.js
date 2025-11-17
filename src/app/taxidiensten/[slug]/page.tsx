@@ -11,14 +11,15 @@ import Blogs from "../../components/layout/taxiservice/Blogs";
 import ContactButton from "../../components/ui/ContactButton";
 import { FaPhoneAlt } from "react-icons/fa";
 import { usePathname } from "next/navigation";
+import Hero2Buttons from "../../components/ui/Hero2Buttons";
 
 const page = () => {
   const path = usePathname();
-  console.log("path name",path)
+  console.log("path name", path);
   const parts = path.split("/").filter(Boolean);
   console.log(parts);
-  const imgaeRootFolder=parts[0]
-  console.log(imgaeRootFolder)
+  const imgaeRootFolder = parts[0];
+  console.log(imgaeRootFolder);
 
   const params = useParams();
   console.log(params);
@@ -33,21 +34,47 @@ const page = () => {
       <div className="bg-black">
         <Nav />
       </div>
-      <TaxiServiceHero
-        headerText={selectedBlog.headerText}
-        headerImage={selectedBlog.headerImage}
-        imgaeRootFolder={imgaeRootFolder}
-      />
+
+      {imgaeRootFolder === "taxiservice" || city === "leerlingenvervoer" ? (
+        <TaxiServiceHero
+          headerText={selectedBlog.headerText}
+          headerImage={selectedBlog.headerImage}
+          imgaeRootFolder={imgaeRootFolder}
+        />
+      ) : (
+        <Hero2Buttons
+          headerText={selectedBlog.headerText}
+          headerImage={selectedBlog.headerImage}
+          imgaeRootFolder={imgaeRootFolder}
+        />
+      )}
+
       <ServicesWithLogos />
       <div className="bg-black p-10">
         <div className="container mx-auto">
-          <Blogs data={selectedBlog.blog1} imagefolder={city} imgaeRootFolder={imgaeRootFolder}/>
-          <ContactButton
-            text="online reserveren"
-            classname="text-black bg-white rounded-xl  mt-10 py-6 px-7 cursor-pointer"
+          <Blogs
+            data={selectedBlog.blog1}
+            imagefolder={city}
+            imgaeRootFolder={imgaeRootFolder}
           />
+
+          {(imgaeRootFolder === "taxiservice" || city === "groepsvervoer") && (
+            <ContactButton
+              text="online reserveren"
+              classname={
+                city === "groepsvervoer"
+                  ? "bg-amber-500 rounded-xl mt-10 py-6 px-7 cursor-pointer text-white"
+                  : "text-black bg-white rounded-xl mt-10 py-6 px-7 cursor-pointer"
+              }
+            />
+          )}
+
           <div className="mt-10 ">
-            <Blogs data={selectedBlog.blog2} imagefolder={city} imgaeRootFolder={imgaeRootFolder}/>
+            <Blogs
+              data={selectedBlog.blog2}
+              imagefolder={city}
+              imgaeRootFolder={imgaeRootFolder}
+            />
           </div>
         </div>
       </div>
@@ -65,7 +92,11 @@ const page = () => {
       </div>
 
       <div className="bg-black p-10">
-        <Blogs data={selectedBlog.blog3} imagefolder={city} imgaeRootFolder={imgaeRootFolder}/>
+        <Blogs
+          data={selectedBlog.blog3}
+          imagefolder={city}
+          imgaeRootFolder={imgaeRootFolder}
+        />
       </div>
 
       <div className="bg-black h-screen flex items-center justify-center text-center">
@@ -83,7 +114,11 @@ const page = () => {
 
       <div className="bg-black p-10">
         <div className="container mx-auto">
-          <Blogs data={selectedBlog.blog4} imagefolder={city} imgaeRootFolder={imgaeRootFolder}/>
+          <Blogs
+            data={selectedBlog.blog4}
+            imagefolder={city}
+            imgaeRootFolder={imgaeRootFolder}
+          />
         </div>
       </div>
 

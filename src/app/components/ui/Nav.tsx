@@ -25,13 +25,13 @@ const Nav: React.FC = () => {
     {
       placeHolder: "taxi Diensten",
       options: [
-        "leerlingenvervoer",
+        "Leerlingenvervoer",
         "Trouwvervoer",
-        "taxi den haag _ schiphol",
-        "groepsvervoer",
-        "zakelijk vervoer",
-        "rolstoel taxi",
-        "hotel taxi service",
+        "Taxi den haag _ schiphol",
+        "Groepsvervoer",
+        "Zakelijk vervoer",
+        "Rolstoel taxi",
+        "Hotel taxi service",
       ],
     },
     {
@@ -39,12 +39,12 @@ const Nav: React.FC = () => {
       options: [
         "Taxi Den Haag",
         "Taxi Rijswijk",
-        "taxi voorburg",
-        "taxi scheveningen",
-        "taxi wassenaar",
-        "taxi leidschendam",
-        "taxi nootdorp",
-        "taxi wateringen",
+        "Taxi voorburg",
+        "Taxi scheveningen",
+        "Taxi wassenaar",
+        "Taxi leidschendam",
+        "Taxi nootdorp",
+        "Taxi wateringen",
       ],
     },
     {

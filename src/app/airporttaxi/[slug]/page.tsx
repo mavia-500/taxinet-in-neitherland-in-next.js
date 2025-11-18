@@ -37,7 +37,7 @@ const page = () => {
 
       {/* Show table on mobile below hero  for responsiveness only*/}
       <div className="p-6 md:hidden ">
-        <TablePrice city={city}/>
+        <TablePrice />
       </div>
       <IconsBar />
       <div className="bg-black p-10">

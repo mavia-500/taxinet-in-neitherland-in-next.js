@@ -8,8 +8,8 @@ interface TableDataItem {
   person1_5: number;
 }
 
-const TablePrice = ({city}) => {
-  console.log(city)
+const TablePrice = () => {
+  // console.log(city)
   const tableData: TableDataItem[] = [
     {
       destination: "Taxi Rotterdam The Hague Airport",

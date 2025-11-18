@@ -12,6 +12,7 @@ import ContactButton from "../../components/ui/ContactButton";
 import { FaPhoneAlt } from "react-icons/fa";
 import { usePathname } from "next/navigation";
 import Hero2Buttons from "../../components/ui/Hero2Buttons";
+import Section3buttons from "../../components/ui/Section3buttons";
 
 const page = () => {
   const path = usePathname();
@@ -79,18 +80,7 @@ const page = () => {
           </div>
         </div>
       </div>
-      <div className="bg-[#f7efe5] h-[30vh]">
-        <div className="container mx-auto flex flex-wrap  items-center justify-center space-x-8 text-center h-full">
-          <ContactButton
-            text="alle  taxidiensten"
-            classname="bg-[#ff8900] text-white rounded-xl px-7 py-6 cursor-pointer "
-          />
-          <ContactButton
-            text="€ ONZE TARIEVEN"
-            classname="bg-black text-white rounded-xl px-7 py-6 cursor-pointer"
-          />
-        </div>
-      </div>
+      <Section3buttons/>
 
       <div className="bg-black p-10">
         <Blogs

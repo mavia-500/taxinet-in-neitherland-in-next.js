@@ -12,6 +12,7 @@ import { BlogData } from "../../data/TaxiServiceData";
 import { useParams, usePathname } from "next/navigation";
 // import { usePathname } from "next/navigation";
 import TaxiServiceHero from "../../components/layout/taxiservice/TaxiServiceHero";
+import BookYourTaxiBtn from "../../components/ui/BookYourTaxiBtn";
 
 const page = () => {
   const path = usePathname();
@@ -64,18 +65,7 @@ const page = () => {
         <Blogs data={selectedBlog.blog3} imagefolder={city} imgaeRootFolder={imgaeRootFolder}/>
       </div>
 
-      <div className="bg-black h-screen flex items-center justify-center text-center">
-        <div className="container mx-auto flex flex-col items-center justify-center space-y-6">
-          <h1 className="text-white text-3xl md:text-5xl font-bold">
-            BOOK YOUR TAXI NOW
-          </h1>
-          <ContactButton
-            text="0858000365"
-            icon={<FaPhoneAlt />}
-            classname="bg-[#ff8900] sm:py-9 sm:px-8 text-white  rounded-md flex items-center gap-3 sm:text-4xl md:text-6xl cursor-pointer mt-3"
-          />
-        </div>
-      </div>
+      <BookYourTaxiBtn/>
 
       <div className="bg-black p-10">
         <div className="container mx-auto">

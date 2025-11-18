@@ -57,7 +57,7 @@ const Nav: React.FC = () => {
     },
     {
       placeHolder: "Airport Taxi",
-      options: ["Schiphol", "Rotterdam The Hague", "Eindhoven"],
+      options: ["Taxi Service den haag to Airport", "Taxi Service Rotterdam to Airport", "Taxi Service Barendrecht to Airport","Taxi Service schiedam to airport","Taxi Service Hoogvliet to airport","Taxi Service spijkenisse to airport","Taxi Service brielle to airport","Taxi Service geervliet to airport"],
     },
     {
       placeHolder: "Over Taxinet",

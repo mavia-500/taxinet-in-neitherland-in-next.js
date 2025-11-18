@@ -8,7 +8,8 @@ interface TableDataItem {
   person1_5: number;
 }
 
-const TablePrice: React.FC = () => {
+const TablePrice = ({city}) => {
+  console.log(city)
   const tableData: TableDataItem[] = [
     {
       destination: "Taxi Rotterdam The Hague Airport",

@@ -1,6 +1,14 @@
 import { IoCallOutline } from "react-icons/io5";
 import ContactButton from "../../ui/ContactButton";
+import { TableAirportTaxi } from "../../../data/TableDataAirportTaxi";
 export default function Table() {
+  
+  // console.log(city)
+  // const entry=city.city
+  // console.log(city.city)
+  // console.log(entry)
+  // const data=TableAirportTaxi[entry]
+  // console.log(data)
   const prices = [
     {
       destination: "Taxi Rotterdam The Hague Airport",
@@ -26,13 +34,13 @@ export default function Table() {
   return (
     <div className="bg-white p-8 rounded-xl shadow-xl w-full max-w-xl">
       <h2 className="text-2xl font-bold mb-6  border-l-2 border-[#ff8900] p-7">
-        Vaste Tarieven Vanuit Den Haag
+      taxi serviuice airport to haag daug
       </h2>
 
       <table className="w-full border border-gray-300 text-left text-sm">
         <thead className="bg-[#ff8900] text-white border border-black">
           <tr>
-            <th className="p-3  border border-black">Destination</th>
+            <th className="p-3  border border-black">Airport Service Giervliet</th>
             <th className="p-3  border border-black">1–4 person</th>
             <th className="p-3">1–5 person</th>
           </tr>

@@ -2,7 +2,7 @@ import ContactButton from "../../ui/ContactButton";
 import Table from "./Table";
 import { IoCallOutline } from "react-icons/io5";
 
-export default function Hero() {
+export default function Hero({ headerText }) {
   return (
     <section className="relative w-full h-[600px] flex items-center">
       {/* Background image */}
@@ -19,7 +19,7 @@ export default function Hero() {
         {/* Left side text */}
         <div className="text-white max-w-xl">
           <h1 className="text-4xl md:text-5xl font-extrabold mb-6">
-            TAXI SERVICE DEN HAAG TO AIRPORT
+            {headerText}
           </h1>
 
           <div className="flex gap-4">

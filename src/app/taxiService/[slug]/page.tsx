@@ -28,7 +28,7 @@ const page = () => {
 
   console.log("params", city);
   const selectedBlog = BlogData[city];
-  console.log(selectedBlog.but);
+  
   return (
     <div className="">
       <div className="bg-black">

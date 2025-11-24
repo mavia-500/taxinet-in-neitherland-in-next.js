@@ -48,26 +48,31 @@ const Nav: React.FC = () => {
       ],
     },
     {
-      placeHolder: "Boek een rit",
+      placeHolder: "Taxi Tarieven Den Haag",
       options: ["Binnenstad", "Luchthaven", "Langere ritten"],
     },
     {
-      placeHolder: "Luchthaventaxi",
-      options: ["Online", "Telefonisch", "App"],
+      placeHolder: "Taxi Bestellen",
+      options: ["Particulier reserveringsformulier", "Zakelijk reserveringsformulier", "Hotel reserveringsformulier","Rolstoel Taxi","Trouw Vervoer","offerte aanvraag","Airport Service","sleepdienst","auto verhuur"],
     },
     {
       placeHolder: "Airport Taxi",
       options: ["Taxi Service den haag to Airport", "Taxi Service Rotterdam to Airport", "Taxi Service Barendrecht to Airport","Taxi Service schiedam to airport","Taxi Service Hoogvliet to airport","Taxi Service spijkenisse to airport","Taxi Service brielle to airport","Taxi Service geervliet to airport"],
     },
     {
+      placeHolder: "Taxibedrijven",
+      options: ["Taxi bedrijven", "Taxi verhuur"],
+    },
+
+    {
       placeHolder: "Over Taxinet",
-      options: ["Taxinet", "HTMC", "CityTaxi"],
+      options: ["Over ons", "Algemene voorwaarden","Solliciteren","Nieuws","Taxinet Haaglanden Bied in Den Haag","Dagje uit in Leidschendam","Op vakantie in Nederland met de taxi","Veelgestelde vragen beantwoord door taxibedrijf Taxinet","Een taxi reserveren: waar moet u op letten?","Voordelen van een zakelijke taxi reserveren","Hoeveel kost het reserveren van een taxi?","Voordelen van het reizen per taxi","Uw post en pakketten vervoeren met Taxinet","Wat is het verschil tussen een bestelde taxi en een straattaxi?","Coronamaatregelen in de taxi","Luchthavenvervoer via Taxinet Haaglanden","Uitje in Den Haag? Reis per taxi!"],
     },
   ];
 
   return (
-    <div className="w-full">
-      <nav>
+    <div className="">
+      <nav className=" ">
         <div className="flex container mx-auto items-center text-white justify-around p-10">
           {/* Logo */}
           <Link href={"/home"}>
@@ -112,9 +117,9 @@ const Nav: React.FC = () => {
 
                 {/* Dropdown List */}
                 {openDropdown === i && (
-                  <ul className="absolute bg-white text-black mt-2 rounded shadow-md p-2 w-40">
+                  <ul className="absolute bg-white text-black mt-2 rounded shadow-md p-2  w-max ">
                     {group.options.map((opt, j) => (
-                      <li key={j} className="py-1 px-2 hover:bg-gray-100">
+                      <li key={j} className="py-1 px-2 hover:bg-gray-100 ">
                         <Link
                           href={`/${group.placeHolder
                             .toLowerCase()
@@ -132,13 +137,15 @@ const Nav: React.FC = () => {
               </div>
             ))}
 
-            <h3 className="text-white">Over Taxinet</h3>
+            {/* <h3 className="text-white">Over Taxinet</h3> */}
 
+            <Link href="/taxidenhaagcontact" className="text-white">
             <ContactButton
               text="Taxi Den Haag Contact"
               classname="bg-[#ff8900] text-white"
               icon={<IoCallOutline className="w-5 h-5" />}
             />
+            </Link>
           </div>
         </div>
       </nav>

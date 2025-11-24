@@ -33,7 +33,7 @@ const page = () => {
       <div className="bg-black relative z-50">
         <Nav />
       </div>
-      <Hero />
+      <Hero headerText={selectedBlog.headerText}/>
 
       {/* Show table on mobile below hero  for responsiveness only*/}
       <div className="p-6 md:hidden ">

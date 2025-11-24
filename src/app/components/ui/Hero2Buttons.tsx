@@ -14,7 +14,7 @@ const  Hero2Buttons = ({
   // console.log(buttonClassName);
   return (
     <section
-      className="bg-cover bg-center h-screen flex items-center justify-center sm:h-[70vh]"
+      className="bg-cover bg-center h-screen flex items-center justify-center sm:h-[70vh] "
       style={{
         backgroundImage: `url("/aset/${imgaeRootFolder}/${headerImage}")`,
       }}

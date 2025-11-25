@@ -49,15 +49,33 @@ const Nav: React.FC = () => {
     },
     {
       placeHolder: "Taxi Tarieven Den Haag",
-      options: ["Binnenstad", "Luchthaven", "Langere ritten"],
+      options: ["Taxi Tarieven Den Haag","Acties"],
     },
     {
       placeHolder: "Taxi Bestellen",
-      options: ["Particulier reserveringsformulier", "Zakelijk reserveringsformulier", "Hotel reserveringsformulier","Rolstoel Taxi","Trouw Vervoer","offerte aanvraag","Airport Service","sleepdienst","auto verhuur"],
+      options: [
+        "Particulier reserveringsformulier",
+        "Zakelijk reserveringsformulier",
+        "Hotel reserveringsformulier",
+        "Rolstoel Taxi",
+        "Trouw Vervoer",
+        "offerte aanvraag",
+        "Airport Service",
+        
+      ],
     },
     {
       placeHolder: "Airport Taxi",
-      options: ["Taxi Service den haag to Airport", "Taxi Service Rotterdam to Airport", "Taxi Service Barendrecht to Airport","Taxi Service schiedam to airport","Taxi Service Hoogvliet to airport","Taxi Service spijkenisse to airport","Taxi Service brielle to airport","Taxi Service geervliet to airport"],
+      options: [
+        "Taxi Service den haag to Airport",
+        "Taxi Service Rotterdam to Airport",
+        "Taxi Service Barendrecht to Airport",
+        "Taxi Service schiedam to airport",
+        "Taxi Service Hoogvliet to airport",
+        "Taxi Service spijkenisse to airport",
+        "Taxi Service brielle to airport",
+        "Taxi Service geervliet to airport",
+      ],
     },
     {
       placeHolder: "Taxibedrijven",
@@ -66,7 +84,25 @@ const Nav: React.FC = () => {
 
     {
       placeHolder: "Over Taxinet",
-      options: ["Over ons", "Algemene voorwaarden","Solliciteren","Nieuws","Taxinet Haaglanden Bied in Den Haag","Dagje uit in Leidschendam","Op vakantie in Nederland met de taxi","Veelgestelde vragen beantwoord door taxibedrijf Taxinet","Een taxi reserveren: waar moet u op letten?","Voordelen van een zakelijke taxi reserveren","Hoeveel kost het reserveren van een taxi?","Voordelen van het reizen per taxi","Uw post en pakketten vervoeren met Taxinet","Wat is het verschil tussen een bestelde taxi en een straattaxi?","Coronamaatregelen in de taxi","Luchthavenvervoer via Taxinet Haaglanden","Uitje in Den Haag? Reis per taxi!"],
+      options: [
+        "Over ons",
+        "Algemene voorwaarden",
+        "Solliciteren",
+        "Nieuws",
+        "Taxinet Haaglanden Bied in Den Haag",
+        "Dagje uit in Leidschendam",
+        "Op vakantie in Nederland met de taxi",
+        "Veelgestelde vragen beantwoord door taxibedrijf Taxinet",
+        "Een taxi reserveren waar moet u op letten?",
+        "Voordelen van een zakelijke taxi reserveren",
+        "Hoeveel kost het reserveren van een taxi?",
+        "Voordelen van het reizen per taxi",
+        "Uw post en pakketten vervoeren met Taxinet",
+        "Wat is het verschil tussen een bestelde taxi en een straattaxi?",
+        "Coronamaatregelen in de taxi",
+        "Luchthavenvervoer via Taxinet Haaglanden",
+        "Uitje in Den Haag Reis per taxi",
+      ],
     },
   ];
 
@@ -140,11 +176,11 @@ const Nav: React.FC = () => {
             {/* <h3 className="text-white">Over Taxinet</h3> */}
 
             <Link href="/taxidenhaagcontact" className="text-white">
-            <ContactButton
-              text="Taxi Den Haag Contact"
-              classname="bg-[#ff8900] text-white"
-              icon={<IoCallOutline className="w-5 h-5" />}
-            />
+              <ContactButton
+                text="Taxi Den Haag Contact"
+                classname="bg-[#ff8900] text-white"
+                icon={<IoCallOutline className="w-5 h-5" />}
+              />
             </Link>
           </div>
         </div>

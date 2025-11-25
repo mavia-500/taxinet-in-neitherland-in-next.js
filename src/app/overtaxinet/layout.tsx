@@ -13,7 +13,7 @@ export default function TaxiLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-800">
+    <div className="min-h-screen bg-black text-gray-800">
       <div className="bg-black">
         <Nav />
       </div>

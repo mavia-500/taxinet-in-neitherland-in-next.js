@@ -5,7 +5,7 @@ const Articel = () => {
   return (
     <div className="w-full flex flex-col items-center bg-black text-white ">
       <h1 className="text-3xl md:text-4xl font-bold my-10">
-        {articelData.title}
+        {articelData.heading}
       </h1>
       <p className="w-[50vw] mb-10">{articelData.description}</p>
       <div className="w-full  flex flex-col gap-14 pb-16 ">
@@ -14,7 +14,7 @@ const Articel = () => {
             {/* Title */}
             <div className="p-10 bg-[#f7efe5] text-black text-center flex flex-col items-center justify-center  ">
               <h2 className="text-2xl font-semibold text-center">
-                {article.title}
+                {article.heading}
               </h2>
               <p className="text-center text-black  w-[30vw] font-bold">
                 {article.description}

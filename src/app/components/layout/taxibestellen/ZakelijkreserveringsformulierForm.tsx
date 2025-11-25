@@ -109,7 +109,7 @@ const ZakelijkreserveringsformulierForm = () => {
 
           <div className="flex justify-center">
             <button className="bg-orange-500 hover:bg-orange-600 transition rounded-lg px-10 py-3 text-white font-semibold">
-              VERZENDEN
+              VERZENDENf
             </button>
           </div>
         </div>

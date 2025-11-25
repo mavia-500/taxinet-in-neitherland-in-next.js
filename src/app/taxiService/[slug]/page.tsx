@@ -20,7 +20,7 @@ const page = () => {
     const parts = path.split("/").filter(Boolean);
     console.log(parts);
     const imgaeRootFolder=parts[0]
-    console.log(imgaeRootFolder)
+    console.log(imgaeRootFolder);
   
   const params = useParams();
 

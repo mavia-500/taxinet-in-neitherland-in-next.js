@@ -25,7 +25,7 @@ const BerkenForm: React.FC = () => {
         </select>
         <input
           type="text"
-          placeholder="Nr."
+          placeholder="Nr.s"
           className="border-2  border-[#efeeed] p-2 rounded  bg-[white] placeholder-black"
         />
         <input

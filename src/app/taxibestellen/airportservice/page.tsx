@@ -2,6 +2,7 @@ import React from "react";
 import Hero2Buttons from "../../components/ui/Hero2Buttons";
 import ServicesWithLogos from "../../components/layout/taxiservice/ServicesWithLogos";
 import AirportserviceForm from "../../components/layout/taxibestellen/AirportserviceForm";
+import TextwithBg from "../../components/layout/taxibestellen/TextwithBg";
 
 const page = () => {
   return (
@@ -9,10 +10,12 @@ const page = () => {
       <Hero2Buttons
         headerText={"Online taxi reserveren"}
         imgaeRootFolder={"taxibestellen"}
-        headerImage={"7429f96187e24caa41392ec303da5d82d5e859e5.png"}
+        headerImage={"de675e83c8c1569e136fccaad1746108808becd7.jpg"}
       />
       <ServicesWithLogos />
-      <AirportserviceForm/>
+      <TextwithBg/>
+      <AirportserviceForm />
+      <div className="min-h-screen bg-black"></div>
     </div>
   );
 };

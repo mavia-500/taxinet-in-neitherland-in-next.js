@@ -17,11 +17,11 @@ export default function TaxiLayout({
       <div className="bg-black">
         <Nav />
       </div>
+     
       <main className="">{children}</main>
 
       <div className="bg-black">
-        <Footer/>
-
+        <Footer />
       </div>
     </div>
   );

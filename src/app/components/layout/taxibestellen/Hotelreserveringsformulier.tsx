@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, FormEvent } from "react";
+import SubmitButton from "./SubmitButton";
 
 // Define the shape of the form data
 interface FormData {
@@ -66,7 +67,7 @@ const Hotelreserveringsformulier: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4 sm:p-6">
-      <div className="w-full max-w-4xl bg-white p-8 sm:p-12 shadow-2xl rounded-xl border-4 border-orange-500">
+      <div className="w-full max-w-4xl bg-white p-8 sm:p-12  rounded-xl border-4 border-amber-500">
         {/* Header Title */}
         <h1 className="text-3xl font-extrabold text-center text-gray-900 mb-10">
           Gegevens Klant(Hotel)
@@ -124,7 +125,7 @@ const Hotelreserveringsformulier: React.FC = () => {
                 rows={4} // Increased rows for better visual balance
                 required={false}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 transition duration-150 ease-in-out text-gray-800 resize-none"
-                placeholder="Voer hier eventuele opmerkingen in..."
+               
               />
             </div>
 
@@ -133,14 +134,7 @@ const Hotelreserveringsformulier: React.FC = () => {
           </div>
 
           {/* Submission Button */}
-          <div className="flex justify-center pt-6">
-            <button
-              type="submit"
-              className="w-full md:w-1/2 lg:w-1/3 px-8 py-4 bg-orange-500 text-white font-bold text-lg rounded-xl shadow-lg hover:bg-orange-600 transition duration-200 ease-in-out transform hover:scale-[1.02] focus:outline-none focus:ring-4 focus:ring-orange-300"
-            >
-              VERZENDEN
-            </button>
-          </div>
+          <SubmitButton/>
         </form>
       </div>
     </div>

@@ -1,6 +1,6 @@
 import React from "react";
-import Nav from "../components/ui/Nav";
-import Footer from "../components/layout/home/Footer";
+import Nav from "../../components/ui/Nav";
+import Footer from "../../components/layout/home/Footer";
 
 export const metadata = {
   title: "over taxinet",
@@ -14,7 +14,7 @@ export default function TaxiLayout({
 }) {
   return (
     <div className="min-h-screen bg-black text-gray-800">
-      <div className="bg-black">
+      <div className="bg-black text-white">
         <Nav />
       </div>
      

@@ -21,6 +21,9 @@ const Nav: React.FC = () => {
     setOpenDropdown(openDropdown === index ? null : index);
   };
 
+  const closeDropdown = () => {
+    setOpenDropdown(null);
+  };
   const selectGroups: SelectGroup[] = [
     {
       placeHolder: "taxi Diensten",
@@ -49,7 +52,7 @@ const Nav: React.FC = () => {
     },
     {
       placeHolder: "Taxi Tarieven Den Haag",
-      options: ["Taxi Tarieven Den Haag","Acties"],
+      options: ["Taxi Tarieven Den Haag", "Acties"],
     },
     {
       placeHolder: "Taxi Bestellen",
@@ -61,7 +64,8 @@ const Nav: React.FC = () => {
         "Trouw Vervoer",
         "offerte aanvraag",
         "Airport Service",
-        
+        "sleepdienst",
+        "auto verhuur"
       ],
     },
     {
@@ -109,7 +113,7 @@ const Nav: React.FC = () => {
   return (
     <div className="">
       <nav className=" ">
-        <div className="flex container mx-auto items-center text-white justify-around p-10">
+        <div className="flex container mx-auto items-center  justify-around p-10">
           {/* Logo */}
           <Link href={"/home"}>
             <img
@@ -121,11 +125,11 @@ const Nav: React.FC = () => {
 
           {/* Hamburger Icon */}
           <div className="2xl:hidden">
-            <button onClick={toggleMenu} className="text-white">
+            <button onClick={toggleMenu} className="">
               {isMenuOpen ? (
-                <IoClose className="w-8 h-8" />
+                <IoClose className="w-8 h-8 text-gray-400" />
               ) : (
-                <IoMenu className="w-8 h-8" />
+                <IoMenu className="w-8 h-8 text-gray-400" />
               )}
             </button>
           </div>
@@ -133,9 +137,11 @@ const Nav: React.FC = () => {
           {/* Navigation Items */}
           <div
             className={`${
-              isMenuOpen ? "flex" : "hidden"
-            } 2xl:flex flex-col 2xl:flex-row 2xl:items-center items-start text-white 
-              gap-6 2xl:static top-20 left-0 w-full 2xl:w-auto p-6 2xl:p-0 z-10`}
+              isMenuOpen
+                ? "flex absolute top-20 bg-gray-300 w-full p-10"
+                : "hidden"
+            } 2xl:flex flex-col 2xl:flex-row 2xl:items-center items-start  
+              gap-6 2xl:static      `}
           >
             {/* Dropdown Menus */}
             {selectGroups.map((group, i) => (
@@ -144,7 +150,7 @@ const Nav: React.FC = () => {
                 <button
                   onClick={() => toggleDropdown(i)}
                   className={`flex items-center gap-2  ${
-                    openDropdown === i ? "text-[#ff8900]" : "text-white"
+                    openDropdown === i ? "text-[#ff8900]" : ""
                   }`}
                 >
                   {group.placeHolder}
@@ -153,9 +159,13 @@ const Nav: React.FC = () => {
 
                 {/* Dropdown List */}
                 {openDropdown === i && (
-                  <ul className="absolute bg-white text-black mt-2 rounded shadow-md p-2  w-max ">
+                  <ul className="absolute bg-gray-500  mt-2 rounded shadow-md p-2  w-max z-50">
                     {group.options.map((opt, j) => (
-                      <li key={j} className="py-1 px-2 hover:bg-gray-100 ">
+                      <li
+                        key={j}
+                        className="py-1 px-2 hover:bg-gray-100 relative z-50"
+                        onClick={closeDropdown}
+                      >
                         <Link
                           href={`/${group.placeHolder
                             .toLowerCase()
